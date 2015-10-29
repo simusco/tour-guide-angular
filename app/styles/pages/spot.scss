@@ -1,0 +1,114 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+.content{
+	@extend %page-container;
+	margin-top:30px;
+
+	&__bread-crumb{
+
+	}
+
+	&__info{
+		@include pie-clearfix();
+		margin-top:20px;
+
+		&--left{
+			@include span(2 of 10);
+		}
+
+		&--right{
+			@include span(8 of 10 last);
+		}
+	}
+}
+
+.slide-menu{
+	&__title{
+		@include inline-block();
+		width: 100%;
+		line-height: 35px;
+		background-color:#dfdfdf;
+		text-align: center;
+	}
+
+	&__submenu{
+		text-align: right;
+
+		> .menu{
+			@include inline-block();
+			width: 96%;
+		}
+	}
+}
+
+.menu{
+	list-style: none;
+	padding:0px;
+
+	&__item{
+		@include inline-block();
+		@include link();
+
+		width: 100%;
+		text-align: left;
+		line-height: 35px;
+
+		&.active,
+		&--active,
+		&:hover{
+			transition: all 0.3s;
+			background-color : #49cbcd;
+			width: 90%;
+			color:#fff;
+		}
+	}
+
+}
+
+.spot{
+
+	&__title{
+		font-weight: 700;
+		font-size: 24px;
+		height: 50px;
+		border-bottom: 1px solid #dfdfdf;
+	}
+
+	&__content{
+		>.topic-content__title{
+			margin-top: 20px;
+		}
+	}
+
+}
+
+.topic-content{
+	@include article-content();
+}
+
+/**
+ * this style for spot html page only.
+ */
+.arrow-icon{
+	padding-right:5px;
+	color:#00a0b0;
+	font-weight:700;
+}

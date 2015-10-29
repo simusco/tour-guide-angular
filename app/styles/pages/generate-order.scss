@@ -1,0 +1,329 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+@import "base/grid";
+@import "base/alignment";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+.content{
+	@extend %page-container;
+}
+
+.panel{
+	border: 1px solid #dfdfdf;
+	width: 100%;
+
+	&--theme1{
+		border:none;
+	}
+
+	&__title{
+		border-bottom: 1px solid #dfdfdf;
+		font-size: 18px;
+		line-height: 36px;
+		color: #333;
+		font-weight: 700;
+
+		&--lcolor{
+			border-left: 3px solid #18a0af;
+			padding-left: 5px;
+			margin-left: 15px;
+			color:#f64d50;
+		}
+	}
+
+	&__title{
+		&--theme1{
+			border-bottom: 1px dashed #dfdfdf;
+		}
+	}
+
+	&__content{
+		padding:10px 3%;
+
+		> .tag-line{
+			height: 30px;
+		}
+	}
+}
+
+.order-progress{
+	width: 100%;
+	padding-top: 30px;
+	height: 30px;
+	margin-bottom: 30px;
+
+	&__item{
+		list-style: none;
+		padding:0px;
+		margin:0px;
+		height: 6px;
+		width: 200px;
+
+		position:relative;
+		float: left;
+		background-color:#dfdfdf;
+
+		&.first,
+		&.last{
+			width: 120px;
+		}
+		&.finished{
+			background-color:#18a0af;
+		}
+	}
+
+}
+
+.step-text{
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 16px;
+	height: 16px;
+
+	>p{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 200px;
+		margin: 10px 0 0 -100px;
+		color: #666;
+		font-size: 14px;
+		text-align: center;
+	}
+}
+
+.disc{
+	@include inline-block();
+	@include border-radius(50%);
+
+	background-color:#fff;
+	border:2px solid #d0d0d0;
+	overflow: hidden;
+	width:14px;
+	height:14px;
+
+	&--finished{
+		@extend .disc;
+		background-color:#18a0af;
+	}
+}
+
+.row{
+	&--title{
+		background-color : #dfdfdf;
+	}
+
+	&--order{
+		border-bottom : 1px solid #dfdfdf;
+	}
+}
+
+.order-ticket{
+	&__title{
+
+	}
+
+	&__body{
+
+	}
+}
+
+.order-name{
+	text-align:left;
+	position:absolute;
+	top:50%;
+	left:10%;
+	margin-top:-20px;
+
+	&__title{
+		font-weight: 700;
+		font-size: 112.5%;
+		color:#f64d50;
+		display: block;
+	}
+
+	&__subtitle{
+		font-size: 85%;
+		color:#999;
+		display: block;
+	}
+}
+
+
+.order-column{
+	@include inline-block();
+	height : 80px;
+	line-height : 80px;
+	text-align : center;
+	position : relative;
+
+	&--name{
+		@extend .order-column;
+		line-height : normal;
+		text-align : left;
+	}
+}
+
+.checkbox{
+	@include inline-block();
+	width: 18px;
+	height: 18px;
+	border: 2px solid #f64d50;
+	margin-top: 4px;
+	border-radius: 3px;
+
+	&.selected{
+		  background-image: url(http://cdn7.jinxidao.com/www/images/book/selectIconHover.png);
+		  background-color: #f64d50;
+		  border-color: #f64d50;
+		  background-repeat: no-repeat;
+		  background-position: center center;
+		  cursor: pointer
+	}
+}
+
+
+.num-btn{
+	@include inline-block();
+	width: 102px;
+	height: 30px;
+	line-height: 30px;
+
+	&__minus,
+	&__plus{
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+		
+		border: 1px solid #c6ccd1;
+		cursor: pointer;
+		text-align: center;
+	  	font-size: 18px;
+	  	font-weight: 700;
+
+	  	display: block;
+	  	float: left;
+	}
+
+	&__text{
+		width: 40px;
+		height: 26px;
+		line-height: 26px;
+
+		border: none;
+		border-top: 1px solid #c6ccd1;
+	  	border-bottom: 1px solid #c6ccd1;
+	  	
+	  	text-align: center;
+
+	  	display: block;
+	  	float: left;
+	}
+
+}
+
+.payment{
+	border:1px solid #dfdfdf;
+
+	&__btn{
+
+	}
+
+	&__price{
+
+	}
+
+	&__back{
+	}
+}
+
+.payment-back{
+	@include inline-block();
+	@include link();
+
+	padding-left : 30px;
+	margin-top : 25px;
+	color : #00a0b0;
+}
+
+.payment-price{
+	@include inline-block();
+
+	width:300px;
+	font-size:85%;
+	padding:10px 0px;
+
+	&__pay{
+		display: block;
+		line-height: 28px;
+
+		>.tag--price{
+			padding:0px;
+			font-size: 150%;
+		}
+	}
+
+	&__desc{
+		display: block;
+	}
+}
+
+.payment-btn{
+	@include inline-block();
+	@include link();
+	background-color : #f64d50;
+	width:200px;
+	padding:10px 0px;
+
+	&__title{
+		display: block;
+		color:#fff;
+		font-size: 150%;
+		text-align: center;
+	}
+
+	&__subtitle{
+		display: block;
+		color:#fff;
+		font-size: 70%;
+		text-align: center;
+		line-height: 18px;
+	}
+
+}
+
+.text-content{
+	&--theme1{
+		color : #999;
+	}
+
+	&__title{
+		color: #333;
+		font-weight: 700;
+		font-size: 14px;
+	}
+}
+
+
+
+
+
+
+

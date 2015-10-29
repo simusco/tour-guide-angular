@@ -1,0 +1,146 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+.content{
+	@extend %page-container;
+	margin-top:30px;
+}
+
+.route{
+	@include container;
+	border:1px solid #dfdfdf;
+
+	&_img{
+		@include span(6 of 10);
+	}
+
+	&_desc{
+		@include span(4 of 10 last);
+	}
+
+	&--theme1{
+		padding:5px;
+		&:hover{
+			@include box-shadow(0 0 10px rgba(157, 157, 157, .5));
+		}
+	}
+}
+
+.route-img{
+	&_1img{
+		line-height: 0px;
+
+		>img{
+			width: 100%;
+		}
+	}
+
+	&_3img{
+		@include container;
+
+		&--left{
+			@include span(24 of 36);
+
+			>img{
+				width: 100%;
+			}
+		}
+
+		&--right{
+			@include span(12 of 36 last);
+
+			>.img{
+				>img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.route-desc{
+	&_header{
+		&--theme1{
+			> p{
+				color:#666;
+			}
+		}
+	}
+
+	&_content{
+		&--default,&--theme1{
+			border-top:1px dashed #dfdfdf;
+		}
+
+		&--theme1{
+			.tag-line{
+				color:#666;
+				line-height: 40px;
+			}
+		}
+	}
+}
+
+.tag-line{
+	&--default{
+		@include inline-block-list();
+	}
+}
+
+.pagebar{
+	@extend %page-container;
+	text-align:center;
+	margin-top:55px;
+}
+
+.pagination{
+	@include pagination();
+}
+
+.route-filter{
+	&_cond,
+	&_tags,
+	&_result{
+		height: 45px;
+		line-height: 45px;
+		border-bottom:1px solid #dfdfdf;
+	}
+
+	&_tags{
+		
+	}
+}
+
+.route-order{
+	&_tags{
+		line-height: 80px;
+		height: 80px;
+
+		.tag--divider{
+			border-left: 1px solid #dfdfdf;
+			padding-top:0px;
+			padding-bottom:0px;
+
+			&.active{
+				color : #f94b4b;
+			}
+		}
+	}
+}

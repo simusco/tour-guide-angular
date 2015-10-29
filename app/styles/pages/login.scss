@@ -1,0 +1,97 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Font awesome
+$fa-font-path: "fonts/";
+@import 'font-awesome/scss/font-awesome';
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+@import "base/grid";
+@import "base/alignment";
+@import "base/font-size";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+
+.content{
+	@include container();
+
+	&__login{
+		position:relative;
+		height: 500px;
+		background:#fff image-url("login/login.png") no-repeat center;
+
+		>.login{
+			position: absolute;
+			top: 50%;
+			margin-top:-215px;
+			right:120px;
+		}
+	}
+}
+
+.login{
+	background-color : #fff;
+	width : 420px;
+
+	&__header{
+
+	}
+
+	&__body{
+
+	}
+}
+
+.toolbar{
+	background-color:#49cbcd;
+	height:45px;
+	line-height:45px;
+
+	&__title{
+		font-size: 18px;
+		font-weight: 700;
+		color: #fff;
+	}
+}
+
+.toolbar-layout{
+	@include container();
+
+	&__title{
+		@include span(100 of 100);
+		text-align: center;
+	}
+}
+
+.input-icon{
+	@include icon-input(280px, 20px);
+}
+
+
+.btn{
+	&--login{
+		@include inline-block();
+		@include border-radius(4px);
+
+		width: 100%;
+		padding:7px 10px;
+
+		border:1px solid #fff;
+		background-color:#f64d50;
+		color:#fff;
+	}
+}

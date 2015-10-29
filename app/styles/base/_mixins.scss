@@ -1,0 +1,162 @@
+%page-container{
+	@include container(1170px center);
+}
+
+@mixin btn($padding : 8px 15px, $bg-hover-color : #dfdfdf, $bg-active-color : #00a0b0) {
+	@include inline-block();
+	padding:$padding;
+	border : none;
+	line-height:normal;
+
+	&:hover{
+		background-color:$bg-hover-color;
+	}
+
+	&.active{
+		background-color:$bg-active-color;
+		color:#fff;
+	}
+}
+
+@mixin link($link-color : #333, $active-color : #333) {
+	color: $link-color;
+	text-decoration: none;
+	cursor: pointer;
+	&:active, &:focus {
+		outline: none;
+		text-decoration: none;
+		color: $active-color;
+	}
+}
+
+@mixin simple-link($line-height : 40px, $link-color : #3a84ac) {
+	line-height:$line-height;
+	text-align:center;
+
+	span,a{
+		@include inline-block();
+	}
+
+	a{
+		color: $link-color;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:active, &:focus {
+			outline: none;
+			text-decoration: none;
+			color: #333;
+		}
+	}
+}
+
+@mixin pagination($border-color : #dddddd, $bg-color : #00a0b0){
+	@include inline-block-list();
+
+	&_item,
+	&_item--active{
+		@include inline-block();
+		@include link();
+		@include btn();
+		border:1px solid $border-color;
+	}
+
+	&_item--active,
+	&_item--active:hover{
+		background-color:$bg-color;
+		color:#fff;
+	}
+
+}
+
+@mixin tag($padding : 7px 15px, $color : #333, $bg-color : #fff) {
+	padding : $padding;
+	color : $color;
+	background-color : $bg-color;
+	text-decoration : none;
+
+	&:hover{
+		text-decoration : none;
+		color:$color;
+	}
+}
+
+@mixin tool($font-color : #999, $background : #fff) {
+	@include inline-block();
+	padding:7px 10px;
+	color: $font-color;
+	background:$background;
+}
+
+@mixin article-content($line-height : 24px) {
+	&__title{
+		display: block;
+		font-size: 120%;
+	}
+
+	&__desc{
+		line-height: $line-height;
+		letter-spacing: 1px;
+		text-indent: $line-height * 1.5;
+	}
+
+	&__img{
+
+		> img{
+			width: 100%;
+			height: auto;
+			margin-top: 10px;
+		}
+
+	}
+}
+
+@mixin element-center($image-width, $image-height) {
+	
+	height: $image-height;
+	position: absolute;
+	margin-top: -#{$image-height/2};
+	top:50%;
+	
+	@if unit($image-width) != "%" {
+		width: $image-width;
+		margin-left: -#{$image-width/2};
+		left:50%;
+	}
+}
+
+@mixin simple-input($width, $height){
+	@include inline-block();
+
+	padding-left:5px;
+	outline: none;
+	box-shadow: none;
+	border:none;
+
+	width : $width;
+	height : $height;
+}
+
+@mixin icon-input($width, $height, $icon-width : 30px, $font-size : 22px){
+	@include inline-block();
+	@include border-radius(4px);
+	@include container($width);
+	border:1px solid #dfdfdf;
+
+	&__icon{
+		@include inline-block();
+		height:$height * 1.5;
+		line-height: $height * 1.5;
+		width: $icon-width;
+		color: #999;
+		text-align: center;
+		font-size: $font-size;
+	}
+
+	&__input{
+		@include simple-input($width - 10 - $icon-width, $height);
+
+		line-height: $font-size;
+		border-left:1px solid #dfdfdf;
+	}
+}

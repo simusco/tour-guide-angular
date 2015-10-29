@@ -1,0 +1,20 @@
+/**
+ * this is 12 column grid system,simliary bootstrap.
+ */
+@mixin span-col-12() {
+	@for $i from 1 through 12 {
+  		.span-#{$i} {
+  			@include span($i * 5 of 60);
+  		}
+
+  		.span-#{$i}-last{
+  			@include span($i * 5 of 60 last);
+  		}
+	}
+}
+
+.container-12{
+	@include container();
+}
+
+@include span-col-12();

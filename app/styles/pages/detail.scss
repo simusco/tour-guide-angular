@@ -1,0 +1,493 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+@import "base/grid";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+.content{
+	@extend %page-container;
+
+	&__overview{
+		
+	}
+
+	&__spot{
+		margin-top:30px;
+	}
+
+	&__book{
+		margin-top:15px;
+
+		.panel__content{
+			padding : 0px;
+		}
+	}
+
+	&__hotel{
+		margin-top:15px;
+
+		.panel__content{
+			padding : 0px;
+		}
+	}
+
+	&__buyknow{
+		
+	}
+
+	&__recplan{
+		.panel__content{
+			padding-left:0px;
+			padding-right:0px;
+		}
+	}
+}
+
+%panel-icon-title{
+	@include inline-block();
+	line-height: 60px;
+	padding-left: 0px;
+	background : #fff image-url("detail/buy-need-know.png") no-repeat left center;
+	color: #333;
+	font-weight: 700;
+}
+
+.panel{
+	border: 1px solid #dfdfdf;
+	width: 100%;
+
+	&--theme1{
+		border:none;
+	}
+
+	&__title{
+		border-bottom: 1px solid #dfdfdf;
+		font-size: 18px;
+		line-height: 36px;
+		color: #333;
+		font-weight: 700;
+
+		&--lcolor{
+			border-left: 3px solid #18a0af;
+			padding-left: 5px;
+			margin-left: 15px;
+		}
+
+		&--buyknow{
+			@extend %panel-icon-title;
+			background : #fff image-url("detail/buy-need-know.png") no-repeat left center;
+		}
+
+		&--recplan{
+			@extend %panel-icon-title;
+			background : #fff image-url("detail/rec-plan.png") no-repeat left center;
+		}
+	}
+
+	&__title{
+		&--theme1{
+			border-bottom: 1px dashed #dfdfdf;
+		}
+	}
+
+	&__content{
+		padding:10px 3%;
+
+		> .tag-line{
+			height: 30px;
+		}
+	}
+}
+
+.book{
+
+	&__datapicker{
+		border-bottom : 1px solid #dfdfdf;
+		line-height: 40px;
+		padding:0px 3%;
+	}
+
+	&__table{
+
+	}
+
+}
+
+.btn-book{
+	@include btn($bg-hover-color : #f94b4b);
+	@include border-radius(4px);
+	@include link($link-color : #fff);
+
+	background-color : #f94b4b;
+}
+
+.ticket-image{
+	&__img{
+		>img{
+			width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+
+.ticket-name{
+	width: 100%;
+
+	&__title{
+		display: block;
+		font-weight: 700;
+		font-size:18px;
+		line-height: 28px;
+	}
+
+	&__subtitle{
+		display: block;
+		font-size:12px;
+		line-height: 16px;
+
+		&--link{
+			text-decoration: none;
+			color:#f94b4b;
+		}
+	}
+}
+
+.book-ticket{
+	@include container();
+	border-bottom : 1px dashed #dfdfdf;
+
+	&--last,
+	&.last{
+		border-bottom : none;
+	}
+
+	&__image{
+		position: relative;
+		height: 120px;
+
+		>.ticket-image{
+			@include element-center(160px, 100px);
+		}
+	}
+
+	&__name{
+		position: relative;
+		height: 120px;
+
+		>.ticket-name{
+			@include element-center(94%, 46px);
+			margin-left: 0px;
+			left: 0%;
+		}
+	}
+
+	&__price{
+		@include inline-block();
+		height: 120px;
+		line-height: 120px;
+	}
+
+	&__marketprice{
+		@include inline-block();
+		height: 120px;
+		line-height: 120px;
+	}
+
+	&__btn{
+		@include inline-block();
+		height: 120px;
+		line-height: 120px;
+		text-align: center;
+	}
+
+}
+
+.hotel-ticket{
+	@include container();
+	border-bottom : 1px dashed #dfdfdf;
+
+	&--last,
+	&.last{
+		@include container();
+		border-bottom : none;
+	}
+
+	&__image{
+		position: relative;
+		height: 120px;
+
+		>.ticket-image{
+			@include element-center(160px, 100px);
+		}
+	}
+
+	&__name{
+		height: 110px;
+		padding-top: 10px;
+
+		.ticket-name{
+			
+			&__title{
+				position : relative;
+				line-height: 36px;
+				border-bottom:  1px solid #dfdfdf;
+
+				&.small{
+					font-size: 16px;
+				}
+			}
+
+			&__subtitle{
+				line-height: 24px;
+			}
+
+			.tag--price{
+				position : absolute;
+				right: 55px;
+				padding:0px;
+
+				> small{
+					font-size: normal;
+				}
+			}
+
+		}
+	}
+
+}
+
+.subnavbar{
+	width : 100%;
+	border-bottom : 1px solid #dfdfdf;
+}
+
+.subnav-wraper{
+	@extend %page-container;
+	margin-top : 30px;
+}
+
+.nav{
+	&_item{
+		&--theme2{
+			> a{
+				@include inline-block();
+				@include link();
+				width: 100%;
+				line-height: 45px;
+				color:#333;
+				font-weight: 500;
+				font-size: 18px;
+				text-align: center;
+			}
+
+			&.active{
+				background-color : #42bdcb;
+
+				>a{
+					color:#fff;
+				}
+			}
+		}
+	}
+}
+
+.route{
+	@include container;
+
+	&_img{
+		@include span(6 of 10);
+	}
+
+	&_desc{
+		@include span(4 of 10 last);
+	}
+}
+
+%image-review{
+	border:1px solid;
+	border-color:#fff;
+	margin:0px 5px;
+	line-height:0px;
+
+	>img{
+		width: 100%;
+		height: 80px;
+	}
+}
+
+.image-review{
+	@extend %image-review;
+
+	&.active{
+		border-color:#42bdcb;
+	}
+
+	&--active{
+		@extend %image-review;
+		border-color:#42bdcb;
+	}
+}
+
+%image-control__btn{
+	@include float(left);
+	@include inline-block();
+	width: 27px;
+	height: 82px;
+
+	&:hover{
+		background-color : #42bdcb;
+	}
+}
+
+.img-control{
+	@include pie-clearfix();
+
+	&__btn{
+		&--left{
+			@extend %image-control__btn;
+			background : #dddddd image-url("detail/left-btn.png") no-repeat center;
+			position : absolute;
+			left: 0px;
+			top: 0px;
+		}
+
+		&--right{
+			@extend %image-control__btn;
+			background : #dddddd image-url("detail/right-btn.png") no-repeat center;
+			position : absolute;
+			right: 0px;
+			top: 0px;
+		}
+	}
+
+	&__review{
+		margin-left: 31px;
+
+		>.image-review,
+		>.image-review--active{
+			@include float(left);
+			width: 146px;
+		}
+	}
+
+}
+
+.img-screen{
+	width : 100%;
+
+	>img{
+		width : 100%;
+	}
+}
+
+.route-img{
+	
+	&__screen{
+
+	}
+
+	&__control{
+		width: 100%;
+		position : relative;
+		overflow : hidden;
+
+		>.img-control{
+			width: 1500px;
+		}
+	}
+
+}
+
+
+.route-desc{
+	&_header{
+		&--theme2{
+			> p{
+				color:#666;
+			}
+		}
+	}
+
+	&_content{
+		&--theme2{
+			border-top:1px dashed #dfdfdf;
+
+			.tag-line{
+				color:#666;
+				line-height: 40px;
+			}
+		}
+	}
+}
+
+
+.text-content{
+	&--theme1{
+		color : #999;
+	}
+
+	&__title{
+		color: #333;
+		font-weight: 700;
+		font-size: 14px;
+	}
+}
+
+.img-content{
+	>img{
+		width: 100%;
+		margin-top: 10px;
+		height: auto;
+	}
+}
+
+.open-calendar{
+	@include inline-block();
+	color: #f94b4b;
+	background: image-url("detail/calendar.png") no-repeat 0 center;
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #f94b4b;
+	border-radius: 2px;
+	padding: 0 24px 0 32px;
+	cursor: pointer;
+	position: relative;
+
+	&__day,
+	&__week{
+		font-style: normal;
+		color: #666;
+		font-weight: bold;
+	}
+
+	&__unselected{
+
+	}
+
+	&__em{
+		width: 0;
+		height: 0;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid #f94b4b;
+		display: block;
+		position: absolute;
+		right: 6px;
+		top: 10px;
+	}
+}

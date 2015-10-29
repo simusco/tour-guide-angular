@@ -1,0 +1,86 @@
+.header{
+	@extend %page-container;
+}
+
+.top{
+	@include container;
+	background:#ccc image-url("index/logo.png") no-repeat left top;
+
+	&_logo{
+		@include span(6 of 10);
+
+		&--link{
+			@include inline-block();
+			height:88px;
+			width: 100%;
+		}
+	}
+
+	&_login{
+		@include span(4 of 10 last);
+		height: 88px;
+		position:relative;
+
+		>.login{
+			position: absolute;
+			top:50%;
+			margin-top:-17px;
+		}
+	}
+
+}
+
+.login{
+	@include inline-block-list();
+
+	&_btn{
+		&--default,
+		&--active{
+			@include btn();
+			@include link();
+		}
+
+		&--active,
+		&--active:hover{
+			background-color:#00a0b0;
+			color:#fff;
+		}
+	}
+
+}
+
+.navbar{
+	width:100%;
+	background-color : #00a0b0;
+}
+
+.nav-wraper{
+	@extend %page-container;
+}
+
+.nav{
+	@include inline-block-list();
+
+	&_item--default,
+	&_item--theme1{
+		> a{
+			@include inline-block();
+			@include link();
+		}
+	}
+
+	&_item--theme1{
+		> a{
+			padding-right:70px;
+			color:#fff;
+			line-height: 60px;
+			font-weight: 500;
+			font-size: 18px;
+
+			&:hover{
+				color:#74d7e1;
+			}
+		}
+	}
+
+}

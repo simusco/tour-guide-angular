@@ -1,0 +1,14 @@
+{
+  "name": "tour-guide-angular",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1",
+	"bootstrap-sass-official": "~3",
+    "modernizr": "~2",
+    "underscore": "~1",
+    "font-awesome": "~4",
+    "respond": "~1",
+    "html5shiv": "~3.7"
+  },
+  "devDependencies": {}
+}

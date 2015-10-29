@@ -1,0 +1,103 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Normalize
+@import "normalize";
+
+//Layout grid.
+@import "susy";
+
+//Spacing
+@import "base/spacing";
+@import "base/variables";
+@import "base/mixins";
+
+@import "modules/common";
+@import "modules/header";
+@import "modules/footer";
+
+.content{
+	@extend %page-container;
+	margin-top:30px;
+}
+
+.topic-detail{
+
+	&__title{
+		border-bottom: 1px solid #dfdfdf;
+		height: 70px;
+	}
+
+	&__content{
+		margin-top: 20px;
+	}
+
+}
+
+.article-title{
+	&__title{
+		text-align: left;
+		font-size:130%;
+		font-weight: 700;
+	}
+
+	&__subtitle{
+		color:#999;
+	}
+}
+
+.topic-content{
+	@include article-content();
+
+	&__title{
+		margin-top: 30px;
+
+		&--spe{
+			text-align: center;
+			font-size:130%;
+			font-weight: 700;
+			text-decoration: underline;
+		}
+
+		&--extr{
+			text-align: center;
+			margin-top: 10px;
+			color:#999;
+		}
+	}
+
+	&__desc{
+		color:#999;
+	}
+
+	&__toolbar{
+		height: 60px;
+		position: relative;
+		top:20px;
+		left:0px;
+
+		>.btn-query{
+			position: absolute;
+			right:20px;
+			top:0px;
+		}
+	}
+
+	&_splite{
+		height: 3px;
+		border:none;
+		border-top : 1px solid #dfdfdf;
+		border-bottom : 1px solid #dfdfdf;
+	}
+
+}
+
+.btn-query{
+	@include btn($bg-hover-color : #00a0b0);
+	@include border-radius(4px);
+	@include link($link-color : #fff);
+
+	background-color : #49cbcd;
+}

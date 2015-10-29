@@ -1,0 +1,10 @@
+{
+  "generator-web": {
+    "appName": "tour-guide-angular",
+    "includeModernizr": true,
+    "includeUnderscore": true,
+    "includeFontAwesome": true,
+    "includeRespond": true,
+    "includeHtml5shiv": true
+  }
+}
