@@ -143,7 +143,9 @@ module.exports = function (grunt) {
 					'<%= yeoman.dist %>/styles/pages/signup.css': ['.tmp/styles/pages/signup.css'],
 					'<%= yeoman.dist %>/styles/pages/spot.css': ['.tmp/styles/pages/spot.css'],
 					'<%= yeoman.dist %>/styles/pages/topic-detail.css': ['.tmp/styles/pages/topic-detail.css'],
-					'<%= yeoman.dist %>/styles/pages/topic.css': ['.tmp/styles/pages/topic.css']
+					'<%= yeoman.dist %>/styles/pages/topic.css': ['.tmp/styles/pages/topic.css'],
+					'<%= yeoman.dist %>/styles/font-awesome-ie7.min.css': ['<%= yeoman.app %>/styles/font-awesome-ie7.min.css'],
+					'<%= yeoman.dist %>/styles/font-awesome.min.css': ['<%= yeoman.app %>/styles/font-awesome.min.css']
 				}
 			}
         },
