@@ -28,27 +28,16 @@
 }
 
 .slide-menu{
-	border:1px solid #dfdfdf;
 	border-bottom:none;
+	background-color:#f0f0f0;
 
 	&__title{
 		@include inline-block();
-		width: 95%;
-		padding-left:5%;
+		padding-left:10%;
+		width: 90%;
 		line-height: 35px;
 		text-align: left;
 		font-weight: 700;
-	}
-
-	&__submenu{
-		> .menu{
-			@include inline-block();
-			width: 100%;
-		}
-	}
-
-	&.last{
-		border:1px solid #dfdfdf;
 	}
 
 	&__headicon{
@@ -64,47 +53,23 @@
 		}
 	}
 
-	&.head{
-		background-color : #fafbfb;
-	}
-}
-
-.menu{
-	list-style: none;
-	margin:0px;
-	padding:0px;
-
 	&__item{
 		@include inline-block();
 		@include link();
-		width: 90%;
-		padding-left:10%;
 		text-align: left;
 		line-height: 35px;
-		position : relative;
+		padding-left:10%;
+		width:90%;
 
 		&.active,
-		&--active{
+		&--active,
+		&:hover{
+			background-color:#fff;
 			color:#18a0af;
-			background-color: #f0f0f0;
-
-			>.menu-item__arrow{
-				color: #18a0af;
-			}
 		}
 	}
-
 }
 
-.menu-item{
-
-	&__arrow{
-		position: absolute;
-		right: 20px;
-		top: 0px;
-		color:#fff;
-	}
-}
 
 
 .profile-grid{
@@ -137,8 +102,6 @@
 
 .rightbody{
 	width : 100%;
-	border:1px solid #dfdfdf;
-	padding: 0px 20px 20px 15px;
 
 	&__bread-crumb{
 		line-height: 50px;
@@ -150,10 +113,6 @@
 		line-height: 42px;
 		background-color : #f0f0f0;
 		width: 100%;
-	}
-
-	&__grid{
-
 	}
 
 	&__pagebar{

@@ -33,7 +33,8 @@ module.exports = function (grunt) {
             },
 			compass: {
 				options: {
-					livereload: false
+					livereload: false,
+					sourcemap : true
 				},
 				files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
 				tasks: ['compass']
@@ -218,12 +219,16 @@ module.exports = function (grunt) {
 				javascriptsDir: '<%= yeoman.app %>/scripts',
 				fontsDir: '<%= yeoman.app %>/styles/fonts',
 				importPath: 'bower_components',
-				relativeAssets: true
+				relativeAssets: false,
+				sourcemap:true,
+				httpImagesPath:'http://static1.tour-guide.com/images/',
+				outputStyle:'compact',
+				debugInfo:false
 			},
 			dist: {},
 			server: {
 				options: {
-					debugInfo: true
+					debugInfo: false
 				}
 			}
 		},

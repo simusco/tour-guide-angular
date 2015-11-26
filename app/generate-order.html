@@ -20,42 +20,46 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
     <div class="header">
-        <div class="top">
-            <div class="top_logo"><a href="" class="top_logo--link"></a></div>
-            <div class="top_login">
-                <ul class="login">
-                    <li><a href="" class="login_btn--default">注册</a></li>
-                    <li><a href="" class="login_btn--active">登陆</a></li>
-                    <li><a href="" class="login_btn--default">关于我们</a></li>
-                </ul>
+        <div class="header__site-nav">
+            <div class="site-nav">
+                <div class="site-nav__left">
+                   <span class="site-nav__desc">你好，欢迎来到兜风旅游梦想世界！</span>
+                </div>
+                <div class="site-nav__right">
+                   <ul class="login">
+                        <li><a href="" class="login__btn login__btn--active">会员登陆</a></li>
+                        <li><span class="login__btn--pipe">|</span></li>
+                        <li><a href="" class="login__btn login__btn--default">免费注册</a></li>
+                        <li><span class="login__btn--pipe">|</span></li>
+                        <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__top">
+            <div class="top">
+                <div class="top_logo"><a href="" class="top_logo--link"></a></div>
+                <div class="top_login"></div>
             </div>
         </div>
     </div>
     <div class="navbar">
-        <div class="nav-wraper">
+        <div class="navbar__wraper">
             <ul class="nav">
-                <li class="nav_item--theme1"><a href="">首页</a></li>
-                <li class="nav_item--theme1 active"><a href="">套餐</a></li>
-                <li class="nav_item--theme1"><a href="">好去处</a></li>
-                <li class="nav_item--theme1"><a href="">主题</a></li>
-                <li class="nav_item--theme1"><a href="">自驾指南</a></li>
+                <li class="nav__item"><a href="">首页</a></li>
+                <li class="nav__item active"><a href="">套餐</a></li>
+                <li class="nav__item"><a href="">好去处</a></li>
+                <li class="nav__item"><a href="">主题</a></li>
+                <li class="nav__item"><a href="">自驾指南</a></li>
             </ul>
         </div>
     </div>
 
 	<div class="content mtl">
         <div class="panel">
-            <!-- 
-            <div class="panel__title">
-                <span class="panel__title--lcolor">进度</span>
-            </div> 
-            -->
-            <div class="panel__content">
+            <div class="panel__content--ger">
                 <div class="order-progress">
                     <ul class="order-progress__item finished first">
                         <li class="step-text">
@@ -85,7 +89,7 @@
 
         <div class="panel mtl">
             <div class="panel__title">
-                <span class="panel__title--lcolor">套餐信息</span>
+                <span class="panel-title panel-title--lcolor">套餐信息</span>
             </div>
             <div class="panel__content">
                 <div class="order-ticket">
@@ -95,7 +99,7 @@
                     <div class="order-ticket__body">
                         <div class="form">
                             <div class="row row--title">
-                                <div class="span-4"><span class="mll">项目</span></div>
+                                <div class="span-4 text-center">项目</div>
                                 <div class="span-1 text-center">操作</div>
                                 <div class="span-3 text-center">入住日期</div>
                                 <div class="span-2 text-center">房间数量</div>
@@ -125,7 +129,7 @@
                                 </div>
                             </div>
 
-                            <div class="row row--order">
+                            <div class="row row--order last">
                                 <div class="span-4 order-column--name">
                                     <div class="order-name">
                                         <span href="" class="order-name__title">金叶子温泉度假酒店</span>
@@ -155,9 +159,9 @@
 
         <div class="panel mtl">
             <div class="panel__title">
-                <span class="panel__title--lcolor">联系人信息</span>
+                <span class="panel-title panel-title--lcolor">联系人信息</span>
             </div>
-            <div class="panel__content">
+            <div class="panel__content--ger">
                 <form action="" class="form" method="post">
                     <div class="row">
                         <div class="span-3">
@@ -183,7 +187,7 @@
         
         <div class="payment container-12 mtl">
             <div class="payment__back span-6">
-                <a href="" class="payment-back">返回</a>
+                <a href="" class="payment-back">返回上一级</a>
             </div>
             <div class="payment__btn span-6-last text-right">
                 <div class="payment-price">
@@ -199,9 +203,9 @@
 
         <div class="panel mtl">
             <div class="panel__title">
-                <span class="panel__title--lcolor">购买须知</span>
+                <span class="panel-title panel-title--lcolor">购买须知</span>
             </div>
-            <div class="panel__content">
+            <div class="panel__content--ger">
                 <div class="text-content text-content--theme1">
                     <p class="text-content__title">[预定须知]</p>
                     <p>1.更改是指在原出票航空公司原航段的不同时间航班空公司的航班上。</p>
@@ -219,9 +223,9 @@
 
         <div class="panel mtl">
             <div class="panel__title">
-                <span class="panel__title--lcolor">退改须知</span>
+                <span class="panel-title panel-title--lcolor">退改须知</span>
             </div>
-            <div class="panel__content">
+            <div class="panel__content--ger">
                 <div class="text-content text-content--theme1">
                     <p class="text-content__title">[预定须知]</p>
                     <p>1.更改是指在原出票航空公司原航段的不同时间航班空公司的航班上。</p>

@@ -69,7 +69,7 @@
 
 }
 
-@mixin tag($padding : 7px 15px, $color : #333, $bg-color : #fff) {
+@mixin tag($padding : 4px 15px, $color : #333, $bg-color : #fff) {
 	padding : $padding;
 	color : $color;
 	background-color : $bg-color;
@@ -141,7 +141,7 @@
 	@include inline-block();
 	@include border-radius(4px);
 	@include container($width);
-	border:1px solid #dfdfdf;
+	border:1px solid #ededed;
 
 	&__icon{
 		@include inline-block();
@@ -157,6 +157,10 @@
 		@include simple-input($width - 10 - $icon-width, $height);
 
 		line-height: $font-size;
-		border-left:1px solid #dfdfdf;
+		border-left:1px solid #ededed;
+		
+		&:focus{
+			color:#333;
+		}
 	}
 }

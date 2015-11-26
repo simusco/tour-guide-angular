@@ -13,6 +13,8 @@
 @import "base/spacing";
 @import "base/variables";
 @import "base/mixins";
+@import "base/grid";
+@import "base/atomcss";
 
 @import "modules/common";
 @import "modules/header";
@@ -41,12 +43,16 @@
 }
 
 .slide-menu{
+
 	&__title{
 		@include inline-block();
 		width: 100%;
-		line-height: 35px;
+		line-height: 40px;
 		background-color:#dfdfdf;
 		text-align: center;
+		font-weight:700;
+		font-size:18px;
+		color:#333;
 	}
 
 	&__submenu{
@@ -56,6 +62,12 @@
 			@include inline-block();
 			width: 96%;
 		}
+	}
+
+	&.fixed{
+		position:fixed;
+		top:20px;
+		width:214px;
 	}
 }
 
@@ -87,9 +99,23 @@
 
 	&__title{
 		font-weight: 700;
-		font-size: 24px;
-		height: 50px;
+		font-size: 18px;
+		height: 60x;
+		line-height: 60px;
 		border-bottom: 1px solid #dfdfdf;
+		padding-left : 40px;
+
+		&--eat{
+			background : #fff image-url("spot/panel-title-eat.png") no-repeat left center;
+		}
+
+		&--play{
+			background : #fff image-url("spot/panel-title-play.png") no-repeat left center;
+		}
+
+		&--spot{
+			background : #fff image-url("spot/panel-title-spot.png") no-repeat left center;
+		}
 	}
 
 	&__content{

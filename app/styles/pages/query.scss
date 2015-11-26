@@ -20,18 +20,20 @@
 
 .content{
 	@extend %page-container;
-	margin-top:30px;
+	margin-top:36px;
 }
 
 .route{
 	@include container;
+	@include link();
+	display:block;
 	border:1px solid #dfdfdf;
 
-	&_img{
+	&__img{
 		@include span(6 of 10);
 	}
 
-	&_desc{
+	&__desc{
 		@include span(4 of 10 last);
 	}
 
@@ -44,7 +46,7 @@
 }
 
 .route-img{
-	&_1img{
+	&__1img{
 		line-height: 0px;
 
 		>img{
@@ -52,7 +54,7 @@
 		}
 	}
 
-	&_3img{
+	&__3img{
 		@include container;
 
 		&--left{
@@ -76,7 +78,7 @@
 }
 
 .route-desc{
-	&_header{
+	&__header{
 		&--theme1{
 			> p{
 				color:#666;
@@ -84,7 +86,7 @@
 		}
 	}
 
-	&_content{
+	&__content{
 		&--default,&--theme1{
 			border-top:1px dashed #dfdfdf;
 		}
@@ -104,34 +106,31 @@
 	}
 }
 
-.pagebar{
-	@extend %page-container;
-	text-align:center;
-	margin-top:55px;
-}
-
-.pagination{
-	@include pagination();
-}
 
 .route-filter{
-	&_cond,
-	&_tags,
-	&_result{
-		height: 45px;
-		line-height: 45px;
-		border-bottom:1px solid #dfdfdf;
-	}
+	&__cond,
+	&__tags,
+	&__result{
+		height: 50px;
+		line-height: 50px;
+		border-bottom:1px solid #ededed;
 
-	&_tags{
-		
+		>.title{
+			font-size:$font-size-md;
+			color:#333;
+		}
 	}
 }
 
 .route-order{
-	&_tags{
+	&__tags{
 		line-height: 80px;
 		height: 80px;
+
+		>.title{
+			font-size:$font-size-md;
+			color:#333;
+		}
 
 		.tag--divider{
 			border-left: 1px solid #dfdfdf;
@@ -143,4 +142,14 @@
 			}
 		}
 	}
+}
+
+.pagebar{
+	@extend %page-container;
+	text-align:center;
+	margin-top:55px;
+}
+
+.pagination{
+	@include pagination();
 }

@@ -14,6 +14,7 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/grid";
+@import "base/atomcss";
 
 @import "modules/common";
 @import "modules/header";
@@ -27,7 +28,7 @@
 	}
 
 	&__spot{
-		margin-top:30px;
+		margin-top:20px;
 	}
 
 	&__book{
@@ -68,49 +69,55 @@
 }
 
 .panel{
-	border: 1px solid #dfdfdf;
 	width: 100%;
 
-	&--theme1{
-		border:none;
-	}
-
 	&__title{
-		border-bottom: 1px solid #dfdfdf;
 		font-size: 18px;
 		line-height: 36px;
 		color: #333;
 		font-weight: 700;
 
-		&--lcolor{
-			border-left: 3px solid #18a0af;
-			padding-left: 5px;
-			margin-left: 15px;
-		}
-
 		&--buyknow{
 			@extend %panel-icon-title;
 			background : #fff image-url("detail/buy-need-know.png") no-repeat left center;
+			padding-left : 40px;
 		}
 
 		&--recplan{
 			@extend %panel-icon-title;
 			background : #fff image-url("detail/rec-plan.png") no-repeat left center;
-		}
-	}
-
-	&__title{
-		&--theme1{
-			border-bottom: 1px dashed #dfdfdf;
+			padding-left : 40px;
 		}
 	}
 
 	&__content{
-		padding:10px 3%;
+		border: 1px solid #dfdfdf;
+		padding:8px 4%;
+		margin-top:15px;
 
 		> .tag-line{
 			height: 30px;
 		}
+	}
+}
+
+.panel-title{
+	@extend %panel-icon-title;
+	display:block;
+	border-bottom: 2px solid #ededed;
+	padding-left : 40px;
+	color:#666;
+
+	&--spot{
+		background : #fff image-url("detail/panel-title-spot.png") no-repeat left center;
+	}
+
+	&--book{
+		background : #fff image-url("detail/panel-title-book.png") no-repeat left center;
+	}
+
+	&--hotel{
+		background : #fff image-url("detail/panel-title-hotel.png") no-repeat left center;
 	}
 }
 
@@ -138,6 +145,9 @@
 
 .ticket-image{
 	&__img{
+		width: 100%;
+		height : 100%;
+		
 		>img{
 			width: 100%;
 			max-height: 100%;
@@ -151,13 +161,13 @@
 	&__title{
 		display: block;
 		font-weight: 700;
-		font-size:18px;
+		font-size:16px;
 		line-height: 28px;
 	}
 
 	&__subtitle{
 		display: block;
-		font-size:12px;
+		font-size:14px;
 		line-height: 16px;
 
 		&--link{
@@ -206,6 +216,8 @@
 		@include inline-block();
 		height: 120px;
 		line-height: 120px;
+		color:#999;
+		font-size:$font-size-md;
 	}
 
 	&__btn{
@@ -281,45 +293,22 @@
 	margin-top : 30px;
 }
 
-.nav{
-	&_item{
-		&--theme2{
-			> a{
-				@include inline-block();
-				@include link();
-				width: 100%;
-				line-height: 45px;
-				color:#333;
-				font-weight: 500;
-				font-size: 18px;
-				text-align: center;
-			}
-
-			&.active{
-				background-color : #42bdcb;
-
-				>a{
-					color:#fff;
-				}
-			}
-		}
-	}
-}
-
 .route{
 	@include container;
+	border:1px solid #ededed;
+	padding:4px;
 
-	&_img{
+	&__img{
 		@include span(6 of 10);
 	}
 
-	&_desc{
+	&__desc{
 		@include span(4 of 10 last);
 	}
 }
 
 %image-review{
-	border:1px solid;
+	border:2px solid;
 	border-color:#fff;
 	margin:0px 5px;
 	line-height:0px;
@@ -333,13 +322,9 @@
 .image-review{
 	@extend %image-review;
 
-	&.active{
-		border-color:#42bdcb;
-	}
-
+	&.active,
 	&--active{
-		@extend %image-review;
-		border-color:#42bdcb;
+		border-color:$page-color;
 	}
 }
 
@@ -350,7 +335,7 @@
 	height: 82px;
 
 	&:hover{
-		background-color : #42bdcb;
+		background-color : $page-color;
 	}
 }
 
@@ -376,12 +361,12 @@
 	}
 
 	&__review{
-		margin-left: 31px;
+		margin-left: 26px;
 
 		>.image-review,
 		>.image-review--active{
 			@include float(left);
-			width: 146px;
+			width: 144px;
 		}
 	}
 
@@ -392,6 +377,7 @@
 
 	>img{
 		width : 100%;
+		height : 400px;
 	}
 }
 
@@ -407,7 +393,7 @@
 		overflow : hidden;
 
 		>.img-control{
-			width: 1500px;
+			width: 3500px;
 		}
 	}
 
@@ -415,15 +401,16 @@
 
 
 .route-desc{
-	&_header{
+	&__header{
 		&--theme2{
 			> p{
 				color:#666;
+				font-size:$font-size-md;
 			}
 		}
 	}
 
-	&_content{
+	&__content{
 		&--theme2{
 			border-top:1px dashed #dfdfdf;
 
@@ -438,13 +425,14 @@
 
 .text-content{
 	&--theme1{
-		color : #999;
+		color : #666;
+		font-size:$font-size-sm;
 	}
 
 	&__title{
+		font-size:$font-size-md;
 		color: #333;
 		font-weight: 700;
-		font-size: 14px;
 	}
 }
 
@@ -489,5 +477,30 @@
 		position: absolute;
 		right: 6px;
 		top: 10px;
+	}
+}
+
+.nav{
+	&__item{
+		&--theme2{
+			> a{
+				@include inline-block();
+				@include link();
+				width: 100%;
+				line-height: 45px;
+				color:#333;
+				font-weight: 500;
+				font-size: 18px;
+				text-align: center;
+			}
+
+			&.active{
+				background-color : $page-color;
+
+				>a{
+					color:#fff;
+				}
+			}
+		}
 	}
 }

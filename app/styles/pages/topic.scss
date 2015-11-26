@@ -10,9 +10,12 @@
 @import "susy";
 
 //Spacing
+//Spacing
 @import "base/spacing";
 @import "base/variables";
 @import "base/mixins";
+@import "base/grid";
+@import "base/atomcss";
 
 @import "modules/common";
 @import "modules/header";
@@ -20,7 +23,6 @@
 
 .content{
 	@extend %page-container;
-	margin-top:30px;
 
 	&__adv{
 		>img{
@@ -29,9 +31,9 @@
 	}
 
 	&__topic{
-		margin-top: 60px;
+		margin-top: 30px;
 		> .topic{
-			border-bottom:1px solid #dfdfdf;
+			border-bottom:1px solid #ededed;
 		}
 
 	}
@@ -49,7 +51,7 @@
 .topic{
 	@include link();
 	display:block;
-	padding : 20px 20px;
+	padding : 22px 50px;
 
 	&__title{
 		font-size:24px;
@@ -79,6 +81,10 @@
 	&:hover{
 		background:#f5f5f5;
 		cursor:pointer;
+
+		.topic__title{
+			color:#00a0b0;
+		}
 	}
 }
 
@@ -87,12 +93,13 @@
 		line-height: 20px;
 		letter-spacing: 1px;
 		text-indent: 36px;
-		color: #999;
+		color: #333;
 	}
 
 	&__toolbar{
 		.toolbar{
 			text-align: right;
+			color:#999;
 		}
 	}
 }

@@ -1,0 +1,19 @@
+.blod{
+	font-weight:700;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.clearfix{
+	@include pie-clearfix();
+}
+
+.relative{
+	position:relative;	
+}

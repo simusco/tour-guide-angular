@@ -20,30 +20,39 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
     <div class="header">
-        <div class="top">
-            <div class="top_logo"><a href="" class="top_logo--link"></a></div>
-            <div class="top_login">
-                <ul class="login">
-                    <li><a href="" class="login_btn--default">注册</a></li>
-                    <li><a href="" class="login_btn--active">登陆</a></li>
-                    <li><a href="" class="login_btn--default">关于我们</a></li>
-                </ul>
+        <div class="header__site-nav">
+            <div class="site-nav">
+                    <div class="site-nav__left">
+                       <span class="site-nav__desc">你好，欢迎来到兜风旅游梦想世界！</span>
+                    </div>
+                    <div class="site-nav__right">
+                       <ul class="login">
+                            <li><a href="" class="login__btn login__btn--active">会员登陆</a></li>
+                            <li><span class="login__btn--pipe">|</span></li>
+                            <li><a href="" class="login__btn login__btn--default">免费注册</a></li>
+                            <li><span class="login__btn--pipe">|</span></li>
+                            <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                        </ul>
+                    </div>
             </div>
+        </div>
+
+        <div class="header__top">
+                <div class="top">
+                    <div class="top_logo"><a href="" class="top_logo--link"></a></div>
+                    <div class="top_login"></div>
+                </div>
         </div>
     </div>
     <div class="navbar">
-        <div class="nav-wraper">
+        <div class="navbar__wraper">
             <ul class="nav">
-                <li class="nav_item--theme1"><a href="">首页</a></li>
-                <li class="nav_item--theme1 active"><a href="">套餐</a></li>
-                <li class="nav_item--theme1"><a href="">好去处</a></li>
-                <li class="nav_item--theme1"><a href="">主题</a></li>
-                <li class="nav_item--theme1"><a href="">自驾指南</a></li>
+                <li class="nav__item"><a href="">首页</a></li>
+                <li class="nav__item active"><a href="">套餐</a></li>
+                <li class="nav__item"><a href="">好去处</a></li>
+                <li class="nav__item"><a href="">主题</a></li>
+                <li class="nav__item"><a href="">自驾指南</a></li>
             </ul>
         </div>
     </div>
@@ -59,7 +68,7 @@
             </div>
             <div class="overview__body">
                 <div class="route route--theme2 mtl">
-                    <div class="route_img">
+                    <div class="route__img">
                         <div class="route-img">
                             <div class="route-img__screen">
                                 <div class="img-screen"><img src="images/detail/hotel-01.png"></div>
@@ -77,7 +86,43 @@
                                         <div class="image-review">
                                             <img src="images/detail/review-img01.png"/>
                                         </div>
-                                        <div class="image-review--active">
+                                        <div class="image-review active">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/hotel04.jpg"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/hotel04.jpg"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/hotel04.jpg"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/review-img01.png"/>
+                                        </div>
+                                        <div class="image-review">
+                                            <img src="images/detail/hotel04.jpg"/>
+                                        </div>
+                                        <div class="image-review">
                                             <img src="images/detail/review-img01.png"/>
                                         </div>
                                     </div>
@@ -86,13 +131,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="route_desc">
-                        <div class="route-desc_header--theme2">
-                            <h3>深圳市荒唐勇士飘零-赢咱温泉2日亦</h3>
+                    <div class="route__desc">
+                        <div class="route-desc__header--theme2">
+                            <h2>深圳市荒唐勇士飘零-赢咱温泉2日亦</h2>
                             <p>Bootstrap 的 CSS 文件是通过 Less 源码编译而来的。Less 是一门预处理语言，支持变量、mixin、函数等额外功能。
                             </p>
                         </div>
-                        <div class="route-desc_content--theme2">
+                        <div class="route-desc__content--theme2">
                             <ul class="tag-line tag-line--default">
                                 <li>建议游玩：</li>
                                 <li><span class="tag tag--out">1天</span></li>
@@ -117,7 +162,7 @@
         <div class="content__spot">
             <div class="panel">
                 <div class="panel__title">
-                    <span class="panel__title--lcolor">亮点</span>
+                    <span class="panel-title panel-title--spot">亮点</span>
                 </div>
                 <div class="panel__content">
                     <ul class="tag-line tag-line--default">
@@ -152,7 +197,7 @@
         <div class="content__book">
             <div class="panel">
                 <div class="panel__title">
-                    <span class="panel__title--lcolor">预定</span>
+                    <span class="panel-title panel-title--book">预定</span>
                 </div>
                 <div class="panel__content">
                     <div class="book__datapicker">
@@ -218,7 +263,7 @@
         <div class="content__hotel">
             <div class="panel">
                 <div class="panel__title">
-                    <span class="panel__title--lcolor">推荐酒店</span>
+                    <span class="panel-title panel-title--hotel">推荐酒店</span>
                 </div>
                 <div class="panel__content">
                     <div class="hotel-ticket">
@@ -262,8 +307,8 @@
     <div class="subnavbar">
         <div class="subnav-wraper">
             <ul class="nav">
-                <li class="nav_item--theme2 span-6"><a href="">购买须知</a></li>
-                <li class="nav_item--theme2 span-6-last active"><a href="">推荐玩法</a></li>
+                <li class="nav__item--theme2 span-6"><a href="">购买须知</a></li>
+                <li class="nav__item--theme2 span-6-last active"><a href="">推荐玩法</a></li>
             </ul>
         </div>
     </div>

@@ -14,6 +14,7 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/grid";
+@import "base/atomcss";
 
 @import "modules/common";
 @import "modules/header";
@@ -30,8 +31,9 @@
 }
 
 .order-title{
-	background-color:#f0f0f0;
-	line-height:24px;
+	background-color:#fafbfb;
+	height:30px;
+	line-height:30px;
 
 	&__column{
 		text-align: center;
@@ -44,7 +46,7 @@
 
 .order{
 	margin-top:10px;
-	border:1px solid #f5f5f5;
+	border:1px solid #e5e5e5;
 
 	&__title{
 
@@ -66,31 +68,19 @@
 	@include container();
 
 	&__column{
-		&--image{
-			@extend %order-body__column;
+		@extend %order-body__column;
 
+		&--image{
 			line-height: normal;
 			position:relative;
 		}
 
 		&--name{
-			@extend %order-body__column;
-
 			line-height: normal;
 			position:relative;
 		}
 
-		&--price{
-			@extend %order-body__column;
-		}
-
-		&--state{
-			@extend %order-body__column;
-		}
-
 		&--btn{
-			@extend %order-body__column;
-
 			line-height: normal;
 			position:relative;
 		}
@@ -119,13 +109,13 @@
 
 	&__title{
 		font-weight: 700;
-		font-size: 112.5%;
+		font-size: $font-size-md;
 		color:#f64d50;
 		display: block;
 	}
 
 	&__subtitle{
-		font-size: 85%;
+		font-size: $font-size-sm;
 		color:#999;
 		display: block;
 	}
@@ -139,7 +129,8 @@
 	margin-top:-37px;
 
 	>.btn-book{
-		margin-top:5px;
+		@include link();
 		color:#f64d50;
+		font-size:14px;
 	}
 }

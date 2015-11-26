@@ -20,37 +20,62 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
     <div class="header">
-        <div class="top">
-            <div class="top_logo"><a href="" class="top_logo--link"></a></div>
-            <div class="top_login">
-                <ul class="login">
-                    <li><a href="" class="login_btn--default">注册</a></li>
-                    <li><a href="" class="login_btn--active">登陆</a></li>
-                    <li><a href="" class="login_btn--default">关于我们</a></li>
-                </ul>
+        <div class="header__site-nav relative">
+            <div class="site-nav">
+                    <div class="site-nav__left">
+                       <span class="site-nav__desc">你好，欢迎来到兜风旅游梦想世界！</span>
+                    </div>
+                    <div class="site-nav__right relative">
+                       <!--
+                       <ul class="login">
+                            <li><a href="" class="login__btn login__btn--active">会员登陆</a></li>
+                            <li><span class="login__btn--pipe">|</span></li>
+                            <li><a href="" class="login__btn login__btn--default">免费注册</a></li>
+                            <li><span class="login__btn--pipe">|</span></li>
+                            <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                        </ul>
+                        -->
+                        <ul class="login">
+                            <li>hi,杨成 <a href="" class="login__btn login__btn--active">退出</a></li>
+                            <li><span class="login__btn--pipe">|</span></li>
+                            <li>
+                               <a href="" class="login__btn login__btn--default pop-menu-d">我的自驾 <span class="icon-angle-down bold"></span></a>
+                            </li>
+                            <li><span class="login__btn--pipe">|</span></li>
+                            <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                        </ul>
+                        <div class="pop-menu clearfix">
+                            <a href="" class="pop-menu__item">我的订单</a>
+                            <a href="" class="pop-menu__item">我的收藏</a>
+                            <a href="" class="pop-menu__item">修改密码</a>
+                        </div>
+                    </div>
             </div>
+        </div>
+
+        <div class="header__top">
+                <div class="top">
+                    <div class="top_logo"><a href="" class="top_logo--link"></a></div>
+                    <div class="top_login"></div>
+                </div>
         </div>
     </div>
     <div class="navbar">
-        <div class="nav-wraper">
+        <div class="navbar__wraper">
             <ul class="nav">
-                <li class="nav_item--theme1"><a href="">首页</a></li>
-                <li class="nav_item--theme1 active"><a href="">套餐</a></li>
-                <li class="nav_item--theme1"><a href="">好去处</a></li>
-                <li class="nav_item--theme1"><a href="">主题</a></li>
-                <li class="nav_item--theme1"><a href="">自驾指南</a></li>
+                <li class="nav__item"><a href="">首页</a></li>
+                <li class="nav__item active"><a href="">套餐</a></li>
+                <li class="nav__item"><a href="">好去处</a></li>
+                <li class="nav__item"><a href="">主题</a></li>
+                <li class="nav__item"><a href="">自驾指南</a></li>
             </ul>
         </div>
     </div>
 
     <div class="content mtl">
         <div class="content__leftslider profile-grid__span-3">
-            <div class="slide-menu last head">
+            <div class="slide-menu">
                 <div class="slide-menu__headicon">
                     <div class="headicon">
                         <img src="images/profile/headicon.png"/>
@@ -60,53 +85,19 @@
             </div>
             <div class="slide-menu mtm">
                 <span class="slide-menu__title">我的订单</span>
-                <div  class="slide-menu__submenu">
-                    <ul class="menu">
-                        <li><a href="" class="menu__item">未支付(3)</a></li>
-                        <li><a href="" class="menu__item">已支付(0)</a></li>
-                        <li><a href="" class="menu__item">已完成(2)</a></li>
-                    </ul>
-                </div>
+				<a href="" class="slide-menu__item">未付款(3)</a>
+				<a href="" class="slide-menu__item">已经付款(3)</a>
+				<a href="" class="slide-menu__item">已完成(3)</a>
             </div>
-
             <div class="slide-menu">
                 <span class="slide-menu__title">我的收藏</span>
-                <div  class="slide-menu__submenu">
-                    <ul class="menu">
-                        <li>
-                            <a href="" class="menu__item active">
-                                收藏
-                                <span class="menu-item__arrow">></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+				<a href="" class="slide-menu__item">收藏</a>
             </div>
-
-            <div class="slide-menu last">
+            <div class="slide-menu">
                 <span class="slide-menu__title">我的资料</span>
-                <div  class="slide-menu__submenu">
-                    <ul class="menu">
-                        <li>
-                            <a href="" class="menu__item">
-                                修改资料
-                                <span class="menu-item__arrow">></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="menu__item">
-                                修改密码
-                                <span class="menu-item__arrow">></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="menu__item">
-                                退出登陆
-                                <span class="menu-item__arrow">></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+				<a href="" class="slide-menu__item">修改资料</a>
+				<a href="" class="slide-menu__item">修改密码</a>
+				<a href="" class="slide-menu__item">退出登录</a>
             </div>
         </div>
         <div class="content__rightbody profile-grid__span-13--last">
@@ -124,12 +115,12 @@
                             <div class="favorite__img">
                                 <div class="thumbnail">
                                     <img class="thumbnail__img" src="images/profile/favorite.png" alt="">
-                                    <p class="thumbnail__name">广州长隆自驾2日游套餐</p>
+                                    <p class="thumbnail__name"><span>广州长隆自驾2日游套餐</span></p>
                                 </div>
                             </div>
                             <div class="favorite__toobar">
                                 <span class="tag--price">¥69元</span>
-                                <small><del>门市价196</del></small>
+                                <small><del class="del">门市价196</del></small>
                                 <input type="button" value="查看详情>>" class="btn-detail"/>
                             </div>
                         </div>
@@ -138,12 +129,12 @@
                             <div class="favorite__img">
                                 <div class="thumbnail">
                                     <img class="thumbnail__img" src="images/profile/favorite.png" alt="">
-                                    <p class="thumbnail__name">广州长隆自驾2日游套餐</p>
+                                    <p class="thumbnail__name"><span>广州长隆自驾2日游套餐</span></p>
                                 </div>
                             </div>
                             <div class="favorite__toobar">
                                 <span class="tag--price">¥69元</span>
-                                <small><del>门市价196</del></small>
+                                <small><del class="del">门市价196</del></small>
                                 <input type="button" value="查看详情>>" class="btn-detail"/>
                             </div>
                         </div>
@@ -152,12 +143,12 @@
                             <div class="favorite__img">
                                 <div class="thumbnail">
                                     <img class="thumbnail__img" src="images/profile/favorite.png" alt="">
-                                    <p class="thumbnail__name">广州长隆自驾2日游套餐</p>
+                                    <p class="thumbnail__name"><span>广州长隆自驾2日游套餐</span></p>
                                 </div>
                             </div>
                             <div class="favorite__toobar">
                                 <span class="tag--price">¥69元</span>
-                                <small><del>门市价196</del></small>
+                                <small><del class="del">门市价196</del></small>
                                 <input type="button" value="查看详情>>" class="btn-detail"/>
                             </div>
                         </div>
@@ -173,7 +164,7 @@
                             </div>
                             <div class="favorite__toobar">
                                 <span class="tag--price">¥69元</span>
-                                <small><del>门市价196</del></small>
+                                <small><del class="del">门市价196</del></small>
                                 <input type="button" value="查看详情>>" class="btn-detail"/>
                             </div>
                         </div>
@@ -187,7 +178,7 @@
                             </div>
                             <div class="favorite__toobar">
                                 <span class="tag--price">¥69元</span>
-                                <small><del>门市价196</del></small>
+                                <small><del class="del">门市价196</del></small>
                                 <input type="button" value="查看详情>>" class="btn-detail"/>
                             </div>
                         </div>
@@ -201,7 +192,7 @@
                             </div>
                             <div class="favorite__toobar">
                                 <span class="tag--price">¥69元</span>
-                                <small><del>门市价196</del></small>
+                                <small><del class="del">门市价196</del></small>
                                 <input type="button" value="查看详情>>" class="btn-detail"/>
                             </div>
                         </div>

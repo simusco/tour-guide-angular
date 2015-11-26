@@ -15,30 +15,20 @@
 @import "base/mixins";
 @import "base/grid";
 @import "base/alignment";
-@import "base/font-size";
 
+@import "base/font-size";
 @import "modules/common";
-@import "modules/header";
-@import "modules/footer";
 
 .content{
 	@include container();
 
 	&__login{
-		position:relative;
-		height: 500px;
-		background:#fff image-url("login/login.png") no-repeat center;
-
-		>.login{
-			position: absolute;
-			top: 50%;
-			margin-top:-215px;
-			right:120px;
-		}
+		
 	}
 }
 
 .login{
+	border: 1px solid #dfdfdf;
 	background-color : #fff;
 	width : 420px;
 
@@ -52,7 +42,7 @@
 }
 
 .toolbar{
-	background-color:$page-color;
+	background-color:#49cbcd;
 	height:45px;
 	line-height:45px;
 
@@ -74,15 +64,8 @@
 
 .input-icon{
 	@include icon-input(280px, 20px);
-
-	&--active{
-		border:1px solid $page-color;
-
-		.icon-user{
-			color:$page-color;
-		}
-	}
 }
+
 
 .btn{
 	@include border-radius(4px);
@@ -90,14 +73,14 @@
 	border:none;
 
 	&-default{
-		background-color: #ededed;
+		background-color: #dfdfdf;
 		border:none;
 	}
 
 	&-warning{
 		background-color: #f64d50;
-		width: 93%;
+		width: 100%;
 		color:#fff;
 	}
-
 }
+

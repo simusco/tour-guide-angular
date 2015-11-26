@@ -10,6 +10,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
+	    <!--[if IE 7]>
+	        <link rel="stylesheet" href="styles/font-awesome-ie7.min.css">
+	    <![endif]-->
         <!-- build:css(.tmp) styles/pages/index.css -->
         <link rel="stylesheet" href="styles/pages/index.css">
         <!-- endbuild -->
@@ -20,30 +24,56 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
         <div class="header">
-            <div class="top">
-                <div class="top_logo"><a href="" class="top_logo--link"></a></div>
-                <div class="top_login">
-                    <ul class="login">
-                        <li><a href="" class="login_btn--default">注册</a></li>
-                        <li><a href="" class="login_btn--active">登陆</a></li>
-                        <li><a href="" class="login_btn--default">关于我们</a></li>
-                    </ul>
+            <div class="header__site-nav relative">
+                    
+                <div class="site-nav">
+                        <div class="site-nav__left">
+                           <span class="site-nav__desc">你好，欢迎来到兜风旅游梦想世界！</span>
+                        </div>
+                        <div class="site-nav__right relative">
+                           <!--
+                           <ul class="login">
+                                <li><a href="" class="login__btn login__btn--active">会员登陆</a></li>
+                                <li><span class="login__btn--pipe">|</span></li>
+                                <li><a href="" class="login__btn login__btn--default">免费注册</a></li>
+                                <li><span class="login__btn--pipe">|</span></li>
+                                <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                            </ul>
+                            -->
+                            <ul class="login">
+                                <li>hi,杨成 <a href="" class="login__btn login__btn--active">退出</a></li>
+                                <li><span class="login__btn--pipe">|</span></li>
+                                <li>
+                                   <a href="" class="login__btn login__btn--default pop-menu-d">我的自驾 <span class="icon-angle-down bold"></span></a>
+                                </li>
+                                <li><span class="login__btn--pipe">|</span></li>
+                                <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                            </ul>
+                            <div class="pop-menu clearfix">
+                                <a href="" class="pop-menu__item">我的订单</a>
+                                <a href="" class="pop-menu__item">我的收藏</a>
+                                <a href="" class="pop-menu__item">修改密码</a>
+                            </div>
+                        </div>
                 </div>
+            </div>
+            
+            <div class="header__top">
+                    <div class="top">
+                        <div class="top_logo"><a href="" class="top_logo--link"></a></div>
+                        <div class="top_login"></div>
+                    </div>
             </div>
         </div>
         <div class="navbar">
-            <div class="nav-wraper">
+            <div class="navbar__wraper">
                 <ul class="nav">
-                    <li class="nav_item--theme1"><a href="">首页</a></li>
-                    <li class="nav_item--theme1 active"><a href="">套餐</a></li>
-                    <li class="nav_item--theme1"><a href="">好去处</a></li>
-                    <li class="nav_item--theme1"><a href="">主题</a></li>
-                    <li class="nav_item--theme1"><a href="">自驾指南</a></li>
+                    <li class="nav__item"><a href="">首页</a></li>
+                    <li class="nav__item active"><a href="">套餐</a></li>
+                    <li class="nav__item"><a href="">好去处</a></li>
+                    <li class="nav__item"><a href="">主题</a></li>
+                    <li class="nav__item"><a href="">自驾指南</a></li>
                 </ul>
             </div>
         </div>
@@ -70,15 +100,16 @@
 
         <div class="content">
             <div class="content__hot">
-                <div class="package__title package-icon--hot">
+                <div class="package__title package-icon--hot relative">
                     <span class="package-text">
                         热门套餐
                         <small class="package-text__small">海量周边热门实惠套餐</small>
                     </span>
+                    <a class="package-more" href="">更多>></a>
                 </div>
                 <div class="package__body index-grid">
                     <div class="index-grid__span-2">
-                        <div class="index-hot">
+                        <a href="" title="" class="index-hot">
                             <div class="index-hot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-hot__desc">
                                  <div class="hot-desc">
@@ -87,17 +118,17 @@
                                         <span class="tag--out">744898</span>人购买 
                                         <span class="tag--out">98%</span>好评
                                     </p>
-                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览</p>
                                  </div>
                             </div>
                             <div class="index-hot__price">
-                                <span class="tag--out">￥100元起</span>
-                                <span>/份<del class="font-1x mlm">门市价:196</del></span>
+                                <span class="tag--out blod">￥100元起</span>
+                                <span class="del">/份<del class="font-1x mlm">门市价:196</del></span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="index-grid__span-2">
-                        <div class="index-hot">
+                        <a href="" title="" class="index-hot">
                             <div class="index-hot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-hot__desc">
                                  <div class="hot-desc">
@@ -106,17 +137,17 @@
                                         <span class="tag--out">744898</span>人购买 
                                         <span class="tag--out">98%</span>好评
                                     </p>
-                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱</p>
                                  </div>
                             </div>
                             <div class="index-hot__price">
-                                <span class="tag--out">￥100元起</span>
-                                <span>/份<del class="font-1x mlm">门市价:196</del></span>
+                                <span class="tag--out blod">￥100元起</span>
+                                <span class="del">/份<del class="font-1x mlm">门市价:196</del></span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="index-grid__span-2">
-                        <div class="index-hot">
+                        <a href="" title="" class="index-hot">
                             <div class="index-hot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-hot__desc">
                                  <div class="hot-desc">
@@ -125,17 +156,17 @@
                                         <span class="tag--out">744898</span>人购买 
                                         <span class="tag--out">98%</span>好评
                                     </p>
-                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区</p>
                                  </div>
                             </div>
                             <div class="index-hot__price">
                                 <span class="tag--out">￥100元起</span>
-                                <span>/份<del class="font-1x mlm">门市价:196</del></span>
+                                <span class="del">/份<del class="font-1x mlm">门市价:196</del></span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="index-grid__span-2--last">
-                        <div class="index-hot">
+                        <a href="" title="" class="index-hot">
                             <div class="index-hot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-hot__desc">
                                  <div class="hot-desc">
@@ -144,114 +175,118 @@
                                         <span class="tag--out">744898</span>人购买 
                                         <span class="tag--out">98%</span>好评
                                     </p>
-                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                                     <p class="hot-desc__text">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行</p>
                                  </div>
                             </div>
                             <div class="index-hot__price">
                                 <span class="tag--out">￥100元起</span>
-                                <span>/份<del class="font-1x mlm">门市价:196</del></span>
+                                <span class="del">/份<del class="font-1x mlm">门市价:196</del></span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="content__spot">
-                <div class="package__title package-icon--spot">
+                <div class="package__title package-icon--spot relative">
                     <span class="package-text">
                         周边好去处
                         <small class="package-text__small">周边特色好玩景点</small>
                     </span>
+                    <a class="package-more" href="">更多>></a>
                 </div>
                 <div class="package__body index-grid">
                     <div class="index-grid__span-2">
-                        <div class="index-spot">
+                        <a href="" title="" class="index-spot">
                             <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-spot__title">广州长隆自驾2日游套餐</div>
-                            <div class="index-spot__desc--small">
-                                 <p class="small">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                            <div class="index-spot__desc">
+                                 <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="index-grid__span-2">
-                        <div class="index-spot">
+                        <a href="" title="" class="index-spot">
                             <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-spot__title">广州长隆自驾2日游套餐</div>
-                            <div class="index-spot__desc--small">
-                                 <p>来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                            <div class="index-spot__desc">
+                                 <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="index-grid__span-2">
-                        <div class="index-spot">
+                        <a href="" title="" class="index-spot">
                             <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-spot__title">广州长隆自驾2日游套餐</div>
-                            <div class="index-spot__desc--small">
-                                 <p class="small">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                            <div class="index-spot__desc">
+                                 <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="index-grid__span-2--last">
-                       <div class="index-spot">
+                       <a href="" title="" class="index-spot">
                             <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
                             <div class="index-spot__title">广州长隆自驾2日游套餐</div>
-                            <div class="index-spot__desc--small">
-                                 <p class="small">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次过饱览400多种2000于只动物</p>
+                            <div class="index-spot__desc">
+                                 <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="content__topic">
-                <div class="package__title package-icon--topic">
+                <div class="package__title package-icon--topic relative">
                     <span class="package-text">
                         主题自驾
                         <small class="package-text__small">为你打造精品主题自驾</small>
                     </span>
+                    <a class="package-more" href="">更多>></a>
                 </div>
                 <div class="package__body index-grid">
-                    <div class="index-grid__span-2">
-                        <div class="index-topic">
-                            <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-topic__title">
-                                <div class="topic-title">
-                                    <span class="topic-title__title">温泉季</span>
-                                    <span class="topic-title__subtitle">出门泡温泉</span>
-                                </div>
+                    <div class="topic-bg clearfix ptm pbm">
+                            <div class="index-grid__span-2">
+                                <a href="" title="" class="index-topic">
+                                    <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
+                                    <div class="index-topic__title">
+                                        <div class="topic-title">
+                                            <span class="topic-title__title">温泉季</span>
+                                            <span class="topic-title__subtitle">出门泡温泉</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="index-grid__span-2">
-                        <div class="index-topic">
-                            <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-topic__title">
-                                <div class="topic-title">
-                                    <span class="topic-title__title">温泉季</span>
-                                    <span class="topic-title__subtitle">出门泡温泉</span>
-                                </div>
+                            <div class="index-grid__span-2">
+                                <a href="" title="" class="index-topic">
+                                    <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
+                                    <div class="index-topic__title">
+                                        <div class="topic-title">
+                                            <span class="topic-title__title">温泉季</span>
+                                            <span class="topic-title__subtitle">出门泡温泉</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="index-grid__span-2">
-                        <div class="index-topic">
-                            <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-topic__title">
-                                <div class="topic-title">
-                                    <span class="topic-title__title">温泉季</span>
-                                    <span class="topic-title__subtitle">出门泡温泉</span>
-                                </div>
+                            <div class="index-grid__span-2">
+                                <a href="" title="" class="index-topic">
+                                    <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
+                                    <div class="index-topic__title">
+                                        <div class="topic-title">
+                                            <span class="topic-title__title">温泉季</span>
+                                            <span class="topic-title__subtitle">出门泡温泉</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="index-grid__span-2--last">
-                        <div class="index-topic">
-                            <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-topic__title">
-                                <div class="topic-title">
-                                    <span class="topic-title__title">温泉季</span>
-                                    <span class="topic-title__subtitle">出门泡温泉</span>
-                                </div>
+                            <div class="index-grid__span-2--last">
+                                <a href="" title="" class="index-topic">
+                                    <div class="index-topic__img"><img src="images/index/hot01.png" alt=""></div>
+                                    <div class="index-topic__title">
+                                        <div class="topic-title">
+                                            <span class="topic-title__title">温泉季</span>
+                                            <span class="topic-title__subtitle">出门泡温泉</span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -266,17 +301,17 @@
                         <p class="advantage__content">亲自丈量，专业勘测，为你精心挑选当季最适合自驾的路线</p>
                     </div>
                     <div class="advantage span-3">
-                        <img src="images/index/advance01.png" class="advantage__img">
+                        <img src="images/index/advance02.png" class="advantage__img">
                         <p class="advantage__title">【精品线路】</p>
                         <p class="advantage__content">亲自丈量，专业勘测，为你精心挑选当季最适合自驾的路线</p>
                     </div>
                     <div class="advantage span-3">
-                        <img src="images/index/advance01.png" class="advantage__img">
+                        <img src="images/index/advance03.png" class="advantage__img">
                         <p class="advantage__title">【精品线路】</p>
                         <p class="advantage__content">亲自丈量，专业勘测，为你精心挑选当季最适合自驾的路线</p>
                     </div>
                     <div class="advantage span-3-last">
-                        <img src="images/index/advance01.png" class="advantage__img">
+                        <img src="images/index/advance04.png" class="advantage__img">
                         <p class="advantage__title">【精品线路】</p>
                         <p class="advantage__content">亲自丈量，专业勘测，为你精心挑选当季最适合自驾的路线</p>
                     </div>

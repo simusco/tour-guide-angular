@@ -20,30 +20,39 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <div class="header">
-            <div class="top">
-                <div class="top_logo"><a href="" class="top_logo--link"></a></div>
-                <div class="top_login">
-                    <ul class="login">
-                        <li><a href="" class="login_btn--default">注册</a></li>
-                        <li><a href="" class="login_btn--active">登陆</a></li>
-                        <li><a href="" class="login_btn--default">关于我们</a></li>
-                    </ul>
+            <div class="header__site-nav">
+                <div class="site-nav">
+                        <div class="site-nav__left">
+                           <span class="site-nav__desc">你好，欢迎来到兜风旅游梦想世界！</span>
+                        </div>
+                        <div class="site-nav__right">
+                           <ul class="login">
+                                <li><a href="" class="login__btn login__btn--active">会员登陆</a></li>
+                                <li><span class="login__btn--pipe">|</span></li>
+                                <li><a href="" class="login__btn login__btn--default">免费注册</a></li>
+                                <li><span class="login__btn--pipe">|</span></li>
+                                <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
+                            </ul>
+                        </div>
                 </div>
+            </div>
+            
+            <div class="header__top">
+                    <div class="top">
+                        <div class="top_logo"><a href="" class="top_logo--link"></a></div>
+                        <div class="top_login"></div>
+                    </div>
             </div>
         </div>
         <div class="navbar">
-            <div class="nav-wraper">
+            <div class="navbar__wraper">
                 <ul class="nav">
-                    <li class="nav_item--theme1"><a href="">首页</a></li>
-                    <li class="nav_item--theme1 active"><a href="">套餐</a></li>
-                    <li class="nav_item--theme1"><a href="">好去处</a></li>
-                    <li class="nav_item--theme1"><a href="">主题</a></li>
-                    <li class="nav_item--theme1"><a href="">自驾指南</a></li>
+                    <li class="nav__item"><a href="">首页</a></li>
+                    <li class="nav__item active"><a href="">套餐</a></li>
+                    <li class="nav__item"><a href="">好去处</a></li>
+                    <li class="nav__item"><a href="">主题</a></li>
+                    <li class="nav__item"><a href="">自驾指南</a></li>
                 </ul>
             </div>
         </div>
@@ -51,58 +60,60 @@
         <div class="content mtl">
             
             <div class="route-filter">
-                <div class="route-filter_cond">
-                    <span class="title">条件：</span>
-                    <span><a href="" class="tag--selected">省份：广东</a></span>
-                    <span><a href="" class="tag--selected">城市：深圳</a></span>
-                    <span><a href="" class="tag--removeable">亲子</a></span>
+                <div class="route-filter__cond">
+                    <span class="title">条&nbsp;件：</span>
+                    <span><a href="" class="tag tag--selected">省份：广东</a></span>
+                    <span><a href="" class="tag tag--selected">城市：深圳</a></span>
+                    <span><a href="" class="tag tag--removeable">亲子</a></span>
                 </div>
-                <div class="route-filter_tags">
-                    <span class="title">景区：</span>
-                    <span><a href="" class="tag--default">全部</a></span>
-                    <span><a href="" class="tag--default">华侨城</a></span>
-                    <span><a href="" class="tag--stress">大小梅沙</a></span>
-                    <span><a href="" class="tag--default">西冲</a></span>
+                <div class="route-filter__tags">
+                    <span class="title">景&nbsp;区：</span>
+                    <span><a href="" class="tag tag--default">全部</a></span>
+                    <span><a href="" class="tag tag--default">华侨城</a></span>
+                    <span><a href="" class="tag tag--stress">大小梅沙</a></span>
+                    <span><a href="" class="tag tag--default">西冲</a></span>
                 </div>
-                <div class="route-filter_tags">
-                    <span class="title">主题：</span>
-                    <span><a href="" class="tag--default">全部</a></span>
-                    <span><a href="" class="tag--stress">观光</a></span>
-                    <span><a href="" class="tag--default">亲子</a></span>
+                <div class="route-filter__tags">
+                    <span class="title">主&nbsp;题：</span>
+                    <span><a href="" class="tag tag--default">全部</a></span>
+                    <span><a href="" class="tag tag--stress">观光</a></span>
+                    <span><a href="" class="tag tag--default">亲子</a></span>
                 </div>
-                <div class="route-filter_result">
+                <!--
+                <div class="route-filter__result">
                     <span class="tag--out">500</span>个结果
                 </div>
+                -->
             </div>
 
             <div class="route-order">
-                <div class="route-order_tags">
-                    <span class="title">排序：</span>
+                <div class="route-order__tags">
+                    <span class="title">排&nbsp;序：</span>
                     <span><a href="" class="tag--divider">推荐</a></span>
                     <span><a href="" class="tag--divider active">销量</a></span>
                     <span><a href="" class="tag--divider">价格</a></span>
                 </div>
             </div>
 
-            <div class="route route--theme1">
-                <div class="route_img">
+            <a href="" title="" class="route route--theme1">
+                <div class="route__img">
                     <div class="route-img">
-                        <div class="route-img_3img--left">
+                        <div class="route-img__3img--left">
                             <img src="images/query/t1.png" alt="">
                         </div>
-                        <div class="route-img_3img--right">
+                        <div class="route-img__3img--right">
                             <div class="img"><img src="images/query/t2.png" alt=""></div>
                             <div class="img"><img src="images/query/t3.png" alt=""></div>
                         </div>
                     </div>
                 </div>
-                <div class="route_desc">
-                    <div class="route-desc_header--theme1">
-                        <h3>深圳市荒唐勇士飘零-赢咱温泉2日亦</h3>
+                <div class="route__desc">
+                    <div class="route-desc__header--theme1">
+                        <h2>深圳市荒唐勇士飘零-赢咱温泉2日亦</h2>
                         <p>Bootstrap 的 CSS 文件是通过 Less 源码编译而来的。Less 是一门预处理语言，支持变量、mixin、函数等额外功能。
                         </p>
                     </div>
-                    <div class="route-desc_content--theme1">
+                    <div class="route-desc__content--theme1">
                         <ul class="tag-line tag-line--default">
                             <li>建议游玩：</li>
                             <li><span class="tag tag--out">1天</span></li>
@@ -120,23 +131,23 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="route route--theme1 mtl">
-                <div class="route_img">
+            <a href="" title="" class="route route--theme1 mtl">
+                <div class="route__img">
                     <div class="route-img">
-                        <div class="route-img_1img">
+                        <div class="route-img__1img">
                             <img src="images/query/route-01.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="route_desc">
-                    <div class="route-desc_header--theme1">
-                        <h3>深圳市荒唐勇士飘零-赢咱温泉2日亦</h3>
+                <div class="route__desc">
+                    <div class="route-desc__header--theme1">
+                        <h2>深圳市荒唐勇士飘零-赢咱温泉2日亦</h2>
                         <p>Bootstrap 的 CSS 文件是通过 Less 源码编译而来的。Less 是一门预处理语言，支持变量、mixin、函数等额外功能。
                         </p>
                     </div>
-                    <div class="route-desc_content--theme1">
+                    <div class="route-desc__content--theme1">
                         <ul class="tag-line tag-line--default">
                             <li>价格：</li>
                             <li><span class="tag tag--out">$978元</span><small>起/份 <del>门市价:1688</del></small></li>
@@ -166,7 +177,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <div class="pagebar">
                 <ul class="pagination">

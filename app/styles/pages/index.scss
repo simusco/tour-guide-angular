@@ -14,6 +14,7 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/grid";
+@import "base/atomcss";
 
 @import "modules/common";
 @import "modules/header";
@@ -39,7 +40,7 @@
 	}
 
 	&__foobanner{
-		margin-top:40px;
+		margin-top:100px;
 	}
 }
 
@@ -52,6 +53,7 @@
 }
 
 .package-text{
+	@include inline-block();
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 50px;
@@ -59,9 +61,24 @@
 	margin: 0px 10px 0px 48px;
 
 	&__small{
-		font-size: 14px;
+		font-size: $font-size-sm;
 		color: #bababa;
 		margin-left: 5px;
+	}
+}
+
+.package-more{
+	@include inline-block();
+	@include link();
+
+	font-size: $font-size-xs;
+	color:#999;
+	position:absolute;
+	right:10px;
+	top:20px;
+
+	&:hover{
+		color:#f94b4b;
 	}
 }
 
@@ -100,19 +117,23 @@
 
 	&__img{
 		float: left;
-		margin-right: 10px;
+		margin-right: 20px;
 		width: 62px;
 		height: 62px;
 	}
 
 	&__title{
-		margin: 0 0 10px;
-		font-size: 14px;
+		padding:0px;
+		margin: 0px;
+		font-size: $font-size-sm;
+		color:#333;
 	}
 
 	&__content{
-		font-size: 12px;
+		margin: 0px;
+		font-size: $font-size-xs;
 		width: 94%;
+		color:#666;
 	}
 
 }
@@ -130,6 +151,8 @@
 }
 
 .index-spot{
+	@include link();
+	display:block;
 	background-color: #f8fafb;
 	border: 1px solid #dfdfdf;
 
@@ -147,19 +170,19 @@
 		@include inline-block();
 		width: 100%;
 		margin: 0px;
+		line-height: 36px;
+		height:36px;
 		color: #fff;
 		background-color: #333;
-		line-height: 28px;
 	}
 
-	&__desc,
-	&__desc--small{
+	&__desc{
 		width: 94%;
 		margin: 0px auto;
-	}
 
-	&__desc--small{
-		font-size: 12px;
+		>p{
+			height: 42px;
+		}
 	}
 
 	&:hover{
@@ -169,17 +192,20 @@
 
 
 .hot-desc{
+	height:105px;
 
 	&__title{
-		font-size: 18px;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-size: 14px;
+		color:#333;
 	}
 
 	&__comment{
-		font-size: 80%;
-
+		margin:5px 0px 5px 0px;
+				
 		>.tag--out{
+			font-size:$font-size-xs;
 			padding:0px;
 			margin:0px;
 			background : none;
@@ -187,11 +213,13 @@
 	}
 
 	&__text{
-		font-size: 80%;
+		font-size:$font-size-xs;
 	}
 }
 
 .index-hot{
+	@include link();
+	display:block;
 	background-color: #f8fafb;
 	border: 1px solid #dfdfdf;
 
@@ -211,15 +239,24 @@
 	}
 
 	&__price{
-		width: 94%;
 		margin: 0px auto;
 		line-height: 30px;
+		width: 94%;
 
 		>.tag--out{
-			background : none;
 			padding:0px;
 			margin:0px;
+			background : none;
+			font-size:16px;
 		}
+
+		>.del{
+			color:#999;
+		}
+	}
+
+	&:hover{
+		@include box-shadow(0 0 10px rgba(157, 157, 157, 0.5));
 	}
 }
 
@@ -242,6 +279,8 @@
 }
 
 .index-topic{
+	@include link();
+	display:block;
 	position:relative;
 
 	&__img{
@@ -265,24 +304,57 @@
 
 }
 
+.advertise{
+	@include clearfix();
+
+	&__screen{
+		position:relative;
+		left:0px;
+		top:0px;
+		background: #fff image-url('index/banner1.png') no-repeat center center;
+		width: 100%;
+		height: 400px;
+	}
+
+	&__ctrlbar{
+		position: relative;
+		left: 0px;
+		top: 50%;
+		margin-top : -25px;
+	}
+
+	&__circlebar{
+		position: relative;
+		left: 0px;
+		top: 85%;
+		text-align: center;
+	}
+
+}
+
+.topic-bg{
+	background-color : #f0f4f4;
+}
+
 .circlebar{
 	&__item{
 		@include inline-block();
 		margin-left: 5px;
 		margin-right: 5px;
-		height: 17px;
-		width: 17px;
+		height: 20px;
+		width: 20px;
 
 		>a{
 			@include inline-block();
 			@include opacity(0.5);
 			@include link();
+			@include border-radius(50%);
 			height: 100%;
 			width: 100%;
 			background-color: #fff;
 
 			&:hover{
-				@include opacity(0.9);
+				background-color:$page-color;
 			}
 		}
 
@@ -309,6 +381,8 @@
 
 		&:hover{
 			@include opacity(0.9);
+
+			background-color:$page-color;
 		}
 	}
 
@@ -326,30 +400,33 @@
 
 }
 
-.advertise{
-	@include clearfix();
+.pop-menu-d{
+	@include inline-block();
+	width:86px;
+	text-align:center;
+}
 
-	&__screen{
-		position:relative;
-		left:0px;
-		top:0px;
-		background: #fff image-url('index/banner1.png') no-repeat center center;
-		width: 100%;
-		height: 500px;
-	}
+.pop-menu{
+	position:absolute;
+	background-color:#fff;
+	width:100px;
+	left:280px;
+	top:35px;
+	border:1px solid #ededed;
 
-	&__ctrlbar{
-		position: relative;
-		left: 0px;
-		top: 50%;
-		margin-top : -25px;
-	}
-
-	&__circlebar{
-		position: relative;
-		left: 0px;
-		top: 90%;
+	&__item{
+		@include link();
+		display:block;
+		width:80%;
+		line-height: 36px;
+		height:36px;
 		text-align: center;
+		font-size:$font-size-sm;
+		margin:0px auto;
+
+		&:hover{
+			border-bottom:4px solid $page-color;
+		}
 	}
 
 }

@@ -1,5 +1,56 @@
 .header{
+	@include container;
+
+	&__site-nav{
+		width:100%;
+		background-color : #f8f8f8;
+		border-bottom:1px solid #dfdfdf;
+	}
+
+	&__top{
+		@extend %page-container;
+	}
+}
+
+.site-nav{
 	@extend %page-container;
+	
+	&__left{
+		@include span(6 of 10);
+	}
+
+	&__right{
+		@include span(4 of 10 last);
+		text-align:right;
+	}
+
+	&__desc{
+		font-size : $font-size-xs;
+		height:32px;
+		line-height:32px;	
+	}
+}
+
+.login{
+	@include inline-block-list();
+
+	&__btn{
+		@include link();
+		line-height:32px;
+		font-size:$font-size-xs;
+		padding:0px 7px;
+
+		&--active,
+		&--default:hover{
+			color:$page-color;
+			font-weight:700;
+		}
+
+		&--pipe{
+			line-height:32px;
+			height:32px;
+		}
+	}
 }
 
 .top{
@@ -11,14 +62,14 @@
 
 		&--link{
 			@include inline-block();
-			height:88px;
+			height:100px;
 			width: 100%;
 		}
 	}
 
 	&_login{
 		@include span(4 of 10 last);
-		height: 88px;
+		height: 100px;
 		position:relative;
 
 		>.login{
@@ -30,56 +81,69 @@
 
 }
 
-.login{
-	@include inline-block-list();
-
-	&_btn{
-		&--default,
-		&--active{
-			@include btn();
-			@include link();
-		}
-
-		&--active,
-		&--active:hover{
-			background-color:#00a0b0;
-			color:#fff;
-		}
-	}
-
-}
-
 .navbar{
 	width:100%;
-	background-color : #00a0b0;
-}
+	background-color : $page-color;
+	border-bottom:1px solid #fff;
 
-.nav-wraper{
-	@extend %page-container;
+	&__wraper{
+		@extend %page-container;
+	}
 }
 
 .nav{
 	@include inline-block-list();
 
-	&_item--default,
-	&_item--theme1{
+	&__item{
 		> a{
 			@include inline-block();
 			@include link();
+
+			margin-right:70px;
+			line-height: 50px;
+			height:50px;
+			font-size: 18px;
+			color:#fff;
+			width:100%;
+			text-align:center;
+
+			&.first{text-align:left;}
+		}
+
+		&.active > a,
+		&:hover{
+			background-color:shade($page-color, 10%);
 		}
 	}
 
-	&_item--theme1{
-		> a{
-			padding-right:70px;
-			color:#fff;
-			line-height: 60px;
-			font-weight: 500;
-			font-size: 18px;
+}
 
-			&:hover{
-				color:#74d7e1;
-			}
+.pop-menu-d{
+	@include inline-block();
+	width:86px;
+	text-align:center;
+}
+
+.pop-menu{
+	position:absolute;
+	background-color:#fff;
+	width:100px;
+	left:280px;
+	top:35px;
+	border:1px solid #ededed;
+
+	&__item{
+		@include link();
+		display:block;
+		width:80%;
+		line-height: 36px;
+		height:36px;
+		text-align: center;
+		font-size:$font-size-sm;
+		margin:0px auto;
+
+		&:hover{
+			border-bottom:4px solid $page-color;
 		}
 	}
 
