@@ -13,6 +13,9 @@
 @import "base/spacing";
 @import "base/variables";
 @import "base/mixins";
+@import "base/grid";
+@import "base/atomcss";
+@import "base/font-size";
 
 @import "modules/common";
 @import "modules/header";
@@ -26,7 +29,7 @@
 .topic-detail{
 
 	&__title{
-		border-bottom: 1px solid #dfdfdf;
+		border-bottom: 1px solid #ededed;
 		height: 70px;
 	}
 
@@ -39,12 +42,13 @@
 .article-title{
 	&__title{
 		text-align: left;
-		font-size:130%;
 		font-weight: 700;
+		font-size:24px;
+		color:#333;
 	}
 
 	&__subtitle{
-		color:#999;
+		color:#666;
 	}
 }
 
@@ -56,20 +60,23 @@
 
 		&--spe{
 			text-align: center;
-			font-size:130%;
+			font-size:24px;
 			font-weight: 700;
 			text-decoration: underline;
+			color:#333;
 		}
 
 		&--extr{
 			text-align: center;
 			margin-top: 10px;
-			color:#999;
+			color:#666;
+			font-size:$font-size-sm;
 		}
 	}
 
 	&__desc{
-		color:#999;
+		color:#666;
+		font-size:$font-size-md;
 	}
 
 	&__toolbar{
@@ -88,16 +95,16 @@
 	&_splite{
 		height: 3px;
 		border:none;
-		border-top : 1px solid #dfdfdf;
-		border-bottom : 1px solid #dfdfdf;
+		border-top : 1px solid #ededed;
+		border-bottom : 1px solid #ededed;
 	}
 
 }
 
 .btn-query{
-	@include btn($bg-hover-color : #00a0b0);
+	@include btn($bg-hover-color : shade($page-color,10%));
 	@include border-radius(4px);
 	@include link($link-color : #fff);
 
-	background-color : #49cbcd;
+	background-color : $page-color;
 }

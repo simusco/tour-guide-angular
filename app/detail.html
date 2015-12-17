@@ -75,7 +75,7 @@
                             </div>
                             <div class="route-img__control">
                                 <div class="img-control">
-                                    <a class="img-control__btn--left"></a>
+                                    <a class="img-control__btn img-control__btn--left"></a>
                                     <div class="img-control__review">
                                         <div class="image-review">
                                             <img src="images/detail/review-img01.png"/>
@@ -126,12 +126,12 @@
                                             <img src="images/detail/review-img01.png"/>
                                         </div>
                                     </div>
-                                    <a class="img-control__btn--right"></a>
+                                    <a class="img-control__btn img-control__btn--right"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="route__desc">
+                    <div class="route__desc relative">
                         <div class="route-desc__header--theme2">
                             <h2>深圳市荒唐勇士飘零-赢咱温泉2日亦</h2>
                             <p>Bootstrap 的 CSS 文件是通过 Less 源码编译而来的。Less 是一门预处理语言，支持变量、mixin、函数等额外功能。
@@ -154,6 +154,10 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="route-desc__toolbar text-right">
+                            <a href="" class="lh50 inline-block unstyled-link icon icon--fav">收藏</a>
+                            <a href="" class="lh50 inline-block unstyled-link icon icon--share mll">分享</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,7 +170,7 @@
                 </div>
                 <div class="panel__content">
                     <ul class="tag-line tag-line--default">
-                        <li>吃点：</li>
+                        <li class="icon icon--eat">吃点：</li>
                         <li>
                             <span><a href="" class="tag--default">美味烧烤</a></span>
                             <span><a href="" class="tag--default">西冲悬崖</a></span>
@@ -174,20 +178,20 @@
                         </li>
                     </ul>
                     <ul class="tag-line tag-line--default">
-                        <li>玩点：</li>
-                        <li>
-                            <span><a href="" class="tag--default">杨梅坑骑单车</a></span>
-                            <span><a href="" class="tag--default">酒吧狂欢</a></span>
-                        </li>
-                    </ul>
-                    <ul class="tag-line tag-line--default">
-                        <li>景点：</li>
+                        <li class="icon icon--spot">景点：</li>
                         <li>
                             <span><a href="" class="tag--default">海滨浴场</a></span>
                             <span><a href="" class="tag--default">快艇出海</a></span>
                             <span><a href="" class="tag--default">钓鱼</a></span>
                             <span><a href="" class="tag--default">西冲天文台</a></span>
                             <span><a href="" class="tag--default">梦幻情人岛</a></span>
+                        </li>
+                    </ul>
+                    <ul class="tag-line tag-line--default">
+                        <li class="icon icon--play">玩点：</li>
+                        <li>
+                            <span><a href="" class="tag--default">杨梅坑骑单车</a></span>
+                            <span><a href="" class="tag--default">酒吧狂欢</a></span>
                         </li>
                     </ul>
                 </div>
@@ -304,7 +308,7 @@
         </div>
     </div>
 
-    <div class="subnavbar">
+    <div class="subnavbar clearfix fixed">
         <div class="subnav-wraper">
             <ul class="nav">
                 <li class="nav__item--theme2 span-6"><a href="">购买须知</a></li>
@@ -315,9 +319,9 @@
 
     <div class="content mtl">
         <div class="content__buyknow">
-            <div class="panel panel--theme1">
-                <div class="panel__title panel__title--theme1">
-                    <span class="panel__title--buyknow">购买须知</span>
+            <div class="panel">
+                <div class="panel__title">
+                    <span class="panel__title panel__title--buyknow">购买须知</span>
                 </div>
                 <div class="panel__content">
                     <div class="text-content text-content--theme1">
@@ -336,9 +340,9 @@
             </div>
         </div>
         <div class="content__recplan">
-            <div class="panel panel--theme1">
-                <div class="panel__title panel__title--theme1">
-                    <span class="panel__title--recplan">推荐玩法</span>
+            <div class="panel">
+                <div class="panel__title">
+                    <span class="panel__title panel__title--recplan">推荐玩法</span>
                 </div>
                 <div class="panel__content">
                     <div class="img-content">

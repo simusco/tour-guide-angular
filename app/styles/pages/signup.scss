@@ -26,7 +26,7 @@
 	@include container();
 
 	&__login{
-		height: 500px;
+		height: 450px;
 		background:#fff image-url("login/login.png") no-repeat center;
 		position: relative;
 
@@ -56,7 +56,6 @@
 
 	&__title{
 		font-size: 18px;
-		font-weight: 700;
 		color: #fff;
 	}
 }
@@ -103,6 +102,7 @@
 
 		&.active{
 			background-color:$page-color;
+			color:#fff;
 		}
 	}
 

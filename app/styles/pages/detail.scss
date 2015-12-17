@@ -15,6 +15,7 @@
 @import "base/mixins";
 @import "base/grid";
 @import "base/atomcss";
+@import "base/font-size";
 
 @import "modules/common";
 @import "modules/header";
@@ -64,7 +65,7 @@
 	line-height: 60px;
 	padding-left: 0px;
 	background : #fff image-url("detail/buy-need-know.png") no-repeat left center;
-	color: #333;
+	color: #666;
 	font-weight: 700;
 }
 
@@ -136,11 +137,11 @@
 }
 
 .btn-book{
-	@include btn($bg-hover-color : #f94b4b);
+	@include btn($bg-hover-color : $tag-color);
 	@include border-radius(4px);
 	@include link($link-color : #fff);
 
-	background-color : #f94b4b;
+	background-color : $tag-color;
 }
 
 .ticket-image{
@@ -160,7 +161,6 @@
 
 	&__title{
 		display: block;
-		font-weight: 700;
 		font-size:16px;
 		line-height: 28px;
 	}
@@ -172,7 +172,7 @@
 
 		&--link{
 			text-decoration: none;
-			color:#f94b4b;
+			color:$tag-color;
 		}
 	}
 }
@@ -285,12 +285,26 @@
 
 .subnavbar{
 	width : 100%;
+	border-top : 1px solid #dfdfdf;
 	border-bottom : 1px solid #dfdfdf;
+	margin-top: 30px;
+	background:#fff;
+
+	&.fixed{
+		position:fixed;
+		top:0px;
+		left: 0px;
+		z-index: 1200;
+		margin-top: 0px;
+
+		@include box-shadow(0px 1px 4px #dfdfdf);
+	}
 }
 
 .subnav-wraper{
-	@extend %page-container;
-	margin-top : 30px;
+	width:1170px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .route{
@@ -304,23 +318,21 @@
 
 	&__desc{
 		@include span(4 of 10 last);
+		height:489px;
 	}
 }
 
-%image-review{
+.image-review{
 	border:2px solid;
 	border-color:#fff;
 	margin:0px 5px;
 	line-height:0px;
+	cursor:pointer;
 
 	>img{
 		width: 100%;
 		height: 80px;
 	}
-}
-
-.image-review{
-	@extend %image-review;
 
 	&.active,
 	&--active{
@@ -328,23 +340,21 @@
 	}
 }
 
-%image-control__btn{
-	@include float(left);
-	@include inline-block();
-	width: 27px;
-	height: 82px;
-
-	&:hover{
-		background-color : $page-color;
-	}
-}
-
 .img-control{
 	@include pie-clearfix();
 
 	&__btn{
+		@include float(left);
+		@include inline-block();
+		width: 27px;
+		height: 82px;
+		z-index: 1000;
+
+		&:hover{
+			background-color : $page-color;
+		}
+
 		&--left{
-			@extend %image-control__btn;
 			background : #dddddd image-url("detail/left-btn.png") no-repeat center;
 			position : absolute;
 			left: 0px;
@@ -352,7 +362,6 @@
 		}
 
 		&--right{
-			@extend %image-control__btn;
 			background : #dddddd image-url("detail/right-btn.png") no-repeat center;
 			position : absolute;
 			right: 0px;
@@ -361,7 +370,11 @@
 	}
 
 	&__review{
-		margin-left: 26px;
+		width:5000px;
+		position:absolute;
+		left:27px;
+		top: 0px;
+		z-index: 100;
 
 		>.image-review,
 		>.image-review--active{
@@ -382,7 +395,6 @@
 }
 
 .route-img{
-	
 	&__screen{
 
 	}
@@ -393,7 +405,9 @@
 		overflow : hidden;
 
 		>.img-control{
-			width: 3500px;
+			position:relative;
+			width:100%;
+			height: 84px;
 		}
 	}
 
@@ -420,6 +434,13 @@
 			}
 		}
 	}
+
+	&__toolbar{
+		position:absolute;
+		bottom: 10px;
+		left:0px;
+		width:100%;
+	}
 }
 
 
@@ -432,7 +453,6 @@
 	&__title{
 		font-size:$font-size-md;
 		color: #333;
-		font-weight: 700;
 	}
 }
 
@@ -446,11 +466,11 @@
 
 .open-calendar{
 	@include inline-block();
-	color: #f94b4b;
+	color: $tag-color;
 	background: image-url("detail/calendar.png") no-repeat 0 center;
 	height: 26px;
 	line-height: 26px;
-	border: 1px solid #f94b4b;
+	border: 1px solid $tag-color;
 	border-radius: 2px;
 	padding: 0 24px 0 32px;
 	cursor: pointer;
@@ -472,7 +492,7 @@
 		height: 0;
 		border-left: 6px solid transparent;
 		border-right: 6px solid transparent;
-		border-top: 6px solid #f94b4b;
+		border-top: 6px solid $tag-color;
 		display: block;
 		position: absolute;
 		right: 6px;
@@ -481,6 +501,8 @@
 }
 
 .nav{
+	width:100%;
+	
 	&__item{
 		&--theme2{
 			> a{
@@ -502,5 +524,82 @@
 				}
 			}
 		}
+	}
+}
+
+.icon{
+	padding-left:40px;
+	box-sizing:border-box;
+
+	&--eat{
+		background:image-url("detail/eat.png") no-repeat left center;
+	}
+
+	&--play{
+		background:image-url("detail/play.png") no-repeat left center;
+	}
+
+	&--spot{
+		background:image-url("detail/spot.png") no-repeat left center;
+	}
+
+	&--fav{
+		background:image-url("detail/icon-fav.png") no-repeat left center;
+	}
+
+	&--faved{
+		background:image-url("detail/icon-faved.png") no-repeat left center;
+	}
+
+	&--share{
+		background:image-url("detail/icon-share.png") no-repeat left center;
+	}
+}
+
+
+.ticket-detail{
+	position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+	&__content{
+		width:700px;
+		height: auto;
+
+		position:absolute;
+		left:50%;
+		top: 50%;
+		margin-left: -350px;
+		
+	    border-radius: 2px;
+	    overflow: hidden;
+	    z-index: 1000;
+	    background: #fff;
+	}
+
+	&__close{
+		font-style: normal;
+	    font-size: 28px;
+	    line-height: 24px;
+	    height: 28px;
+	    width: 28px;
+	    text-align: center;
+	    color: #777;
+	    cursor: pointer;
+	    position: absolute;
+	    top: 12px;
+	    right: 6px;
+	}
+
+	&__mask{
+		position: fixed;
+	    left: 0;
+	    top: 0;
+	    background: rgba(0,0,0,0.4);
+	}
+
+	&__body{
+		padding:10px 20px;
 	}
 }

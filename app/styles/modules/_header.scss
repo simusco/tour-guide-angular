@@ -4,7 +4,7 @@
 	&__site-nav{
 		width:100%;
 		background-color : #f8f8f8;
-		border-bottom:1px solid #dfdfdf;
+		//border-bottom:1px solid #dfdfdf;
 	}
 
 	&__top{
@@ -28,28 +28,6 @@
 		font-size : $font-size-xs;
 		height:32px;
 		line-height:32px;	
-	}
-}
-
-.login{
-	@include inline-block-list();
-
-	&__btn{
-		@include link();
-		line-height:32px;
-		font-size:$font-size-xs;
-		padding:0px 7px;
-
-		&--active,
-		&--default:hover{
-			color:$page-color;
-			font-weight:700;
-		}
-
-		&--pipe{
-			line-height:32px;
-			height:32px;
-		}
 	}
 }
 
@@ -92,13 +70,19 @@
 }
 
 .nav{
-	@include inline-block-list();
+	@include pie-clearfix();
+	list-style: none;
+	padding:0px;
+	margin:0px;
+	float:left;
 
 	&__item{
+		float:left;
+
 		> a{
-			@include inline-block();
 			@include link();
 
+			display:block;
 			margin-right:70px;
 			line-height: 50px;
 			height:50px;
@@ -110,12 +94,51 @@
 			&.first{text-align:left;}
 		}
 
-		&.active > a,
+		&.active,
 		&:hover{
 			background-color:shade($page-color, 10%);
 		}
 	}
 
+}
+
+.login{
+	@include pie-clearfix();
+	list-style: none;
+	padding:0px;
+	margin:0px;
+	float:right;
+
+	> li{
+		float:left;
+		position: relative;
+		z-index: 1;
+
+		.pop-menu{
+			position: absolute;
+			left: 0;
+			top: 32px;
+			display: none;
+		}
+	}
+
+	&__btn{
+		@include link();
+		line-height:32px;
+		font-size:$font-size-xs;
+		padding:0px 7px;
+		color:#666;
+
+		&--active,
+		&--default:hover{
+			color:$page-color;
+		}
+
+		&--pipe{
+			line-height:32px;
+			height:32px;
+		}
+	}
 }
 
 .pop-menu-d{
@@ -126,10 +149,11 @@
 
 .pop-menu{
 	position:absolute;
+	left:0px;
+	top:35px;
+	z-index:1000;
 	background-color:#fff;
 	width:100px;
-	left:280px;
-	top:35px;
 	border:1px solid #ededed;
 
 	&__item{
@@ -146,5 +170,4 @@
 			border-bottom:4px solid $page-color;
 		}
 	}
-
 }

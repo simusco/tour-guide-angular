@@ -33,7 +33,7 @@
 	}
 
 	&-warning{
-		background-color: #f64d50;
+		background-color: $tag-color;
 		width: 93%;
 		color:#fff;
 	}
@@ -53,7 +53,8 @@
 		text-align: center;
 
 		&.active{
-			background-color:#49cbcd;
+			background-color:$page-color;
+			color:#fff;
 		}
 	}
 

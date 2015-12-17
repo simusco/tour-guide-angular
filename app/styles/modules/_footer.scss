@@ -13,7 +13,11 @@
 }
 
 .link-us{
-	@include simple-link($link-color : #3a84ac);
+	@include simple-link($link-color : $link-color);
+
+	>a{
+		padding:0px 3px;
+	}
 }
 
 .copyright,

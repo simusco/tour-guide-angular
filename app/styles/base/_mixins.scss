@@ -50,20 +50,19 @@
 	}
 }
 
-@mixin pagination($border-color : #dddddd, $bg-color : #00a0b0){
+@mixin pagination($border-color : #dddddd, $bg-color : $page-color){
 	@include inline-block-list();
 
-	&_item,
-	&_item--active{
+	&_item{
 		@include inline-block();
 		@include link();
 		@include btn();
 		border:1px solid $border-color;
 	}
 
-	&_item--active,
-	&_item--active:hover{
+	&_item--active{
 		background-color:$bg-color;
+		border:none;
 		color:#fff;
 	}
 
@@ -74,6 +73,7 @@
 	color : $color;
 	background-color : $bg-color;
 	text-decoration : none;
+	white-space: nowrap;
 
 	&:hover{
 		text-decoration : none;
@@ -135,6 +135,8 @@
 
 	width : $width;
 	height : $height;
+
+	&:focus{background:transparent}
 }
 
 @mixin icon-input($width, $height, $icon-width : 30px, $font-size : 22px){
@@ -161,6 +163,7 @@
 		
 		&:focus{
 			color:#333;
+			background:transparent;
 		}
 	}
 }

@@ -1,0 +1,140 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Layout grid.
+@import "susy";
+
+@import "base/variables";
+@import "base/mixins";
+
+.content{
+	@extend %page-container;
+}
+
+.slide-menu{
+
+	&__item{
+		margin-top: 1px;
+		
+		&:hover,
+		&--active{
+			background-color:#ededed;
+			border-left:4px solid $page-color;	
+		}
+	}
+}
+
+.grid8{
+	@include container();
+
+	&__span2{
+		@include span(2 of 8);
+	}
+
+	&__span6-last{
+		@include span(6 of 8 last);
+	}
+}
+
+.help-progress{
+	width: 100%;
+	padding-top: 30px;
+	height: 30px;
+	margin-bottom: 30px;
+
+	&__item{
+		list-style: none;
+		padding:0px;
+		margin:0px;
+		height: 6px;
+		width: 100px;
+
+		position:relative;
+		float: left;
+		background-color:#dfdfdf;
+
+		&.first,
+		&.last{
+			width: 60px;
+		}
+		&.finished{
+			background-color:#18a0af;
+		}
+	}
+
+}
+
+.step-text{
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 16px;
+	height: 16px;
+
+	>p{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 200px;
+		margin: 10px 0 0 -100px;
+		color: #666;
+		font-size: 14px;
+		text-align: center;
+	}
+}
+
+.disc{
+	@include inline-block();
+	@include border-radius(50%);
+
+	background-color:#fff;
+	border:2px solid #d0d0d0;
+	overflow: hidden;
+	width:14px;
+	height:14px;
+
+	&--finished{
+		@extend .disc;
+		background-color:#18a0af;
+	}
+}
+
+
+.help-btn{
+
+	&__item{
+		width:88px;
+		height:28px;
+
+		&:hover,
+		&--active{
+			background-color:$page-color;
+			color:#fff;
+		}
+	}
+
+}
+
+.help-item{
+	&__title{
+
+	}
+
+	&__desc{
+
+	}
+
+	&__img{
+
+	}
+}
+
+.help{
+
+	&__content{
+		margin-top:60px;
+	}
+
+}

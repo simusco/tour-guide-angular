@@ -1,0 +1,47 @@
+//Compass
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+
+//Layout grid.
+@import "susy";
+
+@import "base/variables";
+@import "base/mixins";
+
+.content{
+	@extend %page-container;
+}
+
+.slide-menu{
+
+	&__item{
+		margin-top: 1px;
+		&:hover,
+		&--active{
+			background-color:#ededed;
+			border-left:4px solid $page-color;	
+		}
+	}
+}
+
+.grid8{
+	@include container();
+
+	&__span2{
+		@include span(2 of 8);
+	}
+
+	&__span6-last{
+		@include span(6 of 8 last);
+	}
+}
+
+
+.term{
+
+	&__content{
+		margin:30px 0px;
+	}
+
+}

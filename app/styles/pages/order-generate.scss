@@ -55,12 +55,12 @@
 
 .panel-title{
 	font-size: 16px;
-	border-left: 3px solid #18a0af;
+	border-left: 3px solid #fff;
 	padding-left: 5px;
 	margin-left: 15px;
 	
 	&--lcolor{
-		color:#f64d50;
+		color:$tag-color;
 	}
 }
 
@@ -86,7 +86,7 @@
 			width: 120px;
 		}
 		&.finished{
-			background-color:#18a0af;
+			background-color:$page-color;
 		}
 	}
 
@@ -123,7 +123,7 @@
 
 	&--finished{
 		@extend .disc;
-		background-color:#18a0af;
+		background-color:$page-color;
 	}
 }
 
@@ -197,8 +197,8 @@
 	border-radius: 3px;
 
 	&.selected{
-		  background-image: url(http://cdn7.jinxidao.com/www/images/book/selectIconHover.png);
-		  background-color: #f64d50;
+		  background-image: image-url("detail/selectIcon.png");
+		  background-color: #fff;
 		  border-color: #f64d50;
 		  background-repeat: no-repeat;
 		  background-position: center center;
@@ -239,6 +239,7 @@
 	  	border-bottom: 1px solid #c6ccd1;
 	  	
 	  	text-align: center;
+	  	background-color:#ededed;
 
 	  	display: block;
 	  	float: left;
@@ -267,7 +268,7 @@
 
 	padding-left : 30px;
 	margin-top : 25px;
-	color : #00a0b0;
+	color : $page-color;
 }
 
 .payment-price{
@@ -325,8 +326,53 @@
 	&__title{
 		font-size:$font-size-md;
 		color: #333;
-		font-weight: 700;
 	}
 }
 
 
+.pop-box{
+	position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+	&__content{
+		width:700px;
+		height: auto;
+
+		position:absolute;
+		left:50%;
+		top: 50%;
+		margin-left: -350px;
+		
+	    border-radius: 2px;
+	    overflow: hidden;
+	    z-index: 1000;
+	    background: #fff;
+	}
+
+	&__close{
+		font-style: normal;
+	    font-size: 28px;
+	    line-height: 24px;
+	    height: 28px;
+	    width: 28px;
+	    text-align: center;
+	    color: #777;
+	    cursor: pointer;
+	    position: absolute;
+	    top: 12px;
+	    right: 6px;
+	}
+
+	&__mask{
+		position: fixed;
+	    left: 0;
+	    top: 0;
+	    background: rgba(0,0,0,0.4);
+	}
+
+	&__body{
+		padding:10px 20px;
+	}
+}

@@ -21,7 +21,7 @@
         <!--[if lt IE 9]>
         <script src="scripts/html5shiv.js"></script>
         <script src="scripts/respond.min.js"></script>
-        <![endif]-->
+        <![endif]-->        
     </head>
     <body>
         <div class="header">
@@ -45,16 +45,17 @@
                                 <li>hi,杨成 <a href="" class="login__btn login__btn--active">退出</a></li>
                                 <li><span class="login__btn--pipe">|</span></li>
                                 <li>
-                                   <a href="" class="login__btn login__btn--default pop-menu-d">我的自驾 <span class="icon-angle-down bold"></span></a>
+                                   <a href="" class="login__btn login__btn--default pop-menu-d" ui-pop-menu="1001">我的自驾 <span class="icon-angle-down bold"></span></a>
+                                   <div class="pop-menu clearfix" style="display:block">
+                                        <a href="" class="pop-menu__item">我的订单</a>
+                                        <a href="" class="pop-menu__item">我的收藏</a>
+                                        <a href="" class="pop-menu__item">修改密码</a>
+                                   </div>
                                 </li>
                                 <li><span class="login__btn--pipe">|</span></li>
                                 <li><a href="" class="login__btn login__btn--default">关注我们</a></li>
                             </ul>
-                            <div class="pop-menu clearfix">
-                                <a href="" class="pop-menu__item">我的订单</a>
-                                <a href="" class="pop-menu__item">我的收藏</a>
-                                <a href="" class="pop-menu__item">修改密码</a>
-                            </div>
+                            
                         </div>
                 </div>
             </div>
@@ -197,8 +198,10 @@
                 <div class="package__body index-grid">
                     <div class="index-grid__span-2">
                         <a href="" title="" class="index-spot">
-                            <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            <div class="index-spot__img">
+                                <img src="images/index/hot01.png" alt="">
+                                <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            </div>
                             <div class="index-spot__desc">
                                  <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自</p>
                             </div>
@@ -206,8 +209,10 @@
                     </div>
                     <div class="index-grid__span-2">
                         <a href="" title="" class="index-spot">
-                            <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            <div class="index-spot__img">
+                                <img src="images/index/hot01.png" alt="">
+                                <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            </div>
                             <div class="index-spot__desc">
                                  <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次</p>
                             </div>
@@ -215,8 +220,10 @@
                     </div>
                     <div class="index-grid__span-2">
                         <a href="" title="" class="index-spot">
-                            <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            <div class="index-spot__img">
+                                <img src="images/index/hot01.png" alt="">
+                                <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            </div>
                             <div class="index-spot__desc">
                                  <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次</p>
                             </div>
@@ -224,8 +231,10 @@
                     </div>
                     <div class="index-grid__span-2--last">
                        <a href="" title="" class="index-spot">
-                            <div class="index-spot__img"><img src="images/index/hot01.png" alt=""></div>
-                            <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            <div class="index-spot__img">
+                                <img src="images/index/hot01.png" alt="">
+                                <div class="index-spot__title">广州长隆自驾2日游套餐</div>
+                            </div>
                             <div class="index-spot__desc">
                                  <p class="font-1x">来野生动物世界，跟着“爸爸去哪儿”，自从自驾区五大洲到步行区一次</p>
                             </div>
@@ -348,6 +357,24 @@
         <!-- build:js({.tmp,app}) scripts/main.min.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script type="text/javascript">
+            $(funciton(){
+
+                    $('*[ui-pop-menu]').mouseover(function(){
+
+                         var self = $(this);
+                         var popMenuId = self.attr('ui-pop-menu');
+                         var popMenu = $('div[pop-menu='+popMenuId+']');
+
+                         popMenu.css({
+                             'left' : '200px'
+                         });
+
+                    });
+
+            });
+        </script>
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

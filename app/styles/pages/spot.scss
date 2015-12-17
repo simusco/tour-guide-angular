@@ -87,7 +87,7 @@
 		&--active,
 		&:hover{
 			transition: all 0.3s;
-			background-color : #49cbcd;
+			background-color : $page-color;
 			width: 90%;
 			color:#fff;
 		}

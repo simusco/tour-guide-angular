@@ -26,13 +26,13 @@
 
 	&__login{
 		position:relative;
-		height: 500px;
+		height: 450px;
 		background:#fff image-url("login/login.png") no-repeat center;
 
 		>.login{
 			position: absolute;
 			top: 50%;
-			margin-top:-215px;
+			margin-top:-180px;
 			right:120px;
 		}
 	}
@@ -58,7 +58,6 @@
 
 	&__title{
 		font-size: 18px;
-		font-weight: 700;
 		color: #fff;
 	}
 }
@@ -96,7 +95,7 @@
 
 	&-warning{
 		background-color: #f64d50;
-		width: 93%;
+		width: 280px;
 		color:#fff;
 	}
 

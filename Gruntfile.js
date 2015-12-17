@@ -133,9 +133,9 @@ module.exports = function (grunt) {
 				files: {
 					'<%= yeoman.dist %>/styles/pages/detail.css': ['.tmp/styles/pages/detail.css'],
 					'<%= yeoman.dist %>/styles/pages/favorite.css': ['.tmp/styles/pages/favorite.css'],
-					'<%= yeoman.dist %>/styles/pages/generate-order.css': ['.tmp/styles/pages/generate-order.css'],
+					'<%= yeoman.dist %>/styles/pages/order-generate.css': ['.tmp/styles/pages/order-generate.css'],
 					'<%= yeoman.dist %>/styles/pages/index.css': ['.tmp/styles/pages/index.css'],
-					'<%= yeoman.dist %>/styles/pages/login.css': ['.tmp/styles/pages/login.css'],
+					'<%= yeoman.dist %>/styles/pages/signin.css': ['.tmp/styles/pages/signin.css'],
 					'<%= yeoman.dist %>/styles/pages/modify-profile.css': ['.tmp/styles/pages/modify-profile.css'],
 					'<%= yeoman.dist %>/styles/pages/order.css': ['.tmp/styles/pages/order.css'],
 					'<%= yeoman.dist %>/styles/pages/payment.css': ['.tmp/styles/pages/payment.css'],
@@ -211,6 +211,7 @@ module.exports = function (grunt) {
 			}
         },
 
+        //httpImagesPath:'http://112.74.208.184/images/',
 		compass: {
 			options: {
 				sassDir: '<%= yeoman.app %>/styles',
@@ -221,7 +222,7 @@ module.exports = function (grunt) {
 				importPath: 'bower_components',
 				relativeAssets: false,
 				sourcemap:true,
-				httpImagesPath:'http://static1.tour-guide.com/images/',
+				httpImagesPath:'http://112.74.208.184/images/',
 				outputStyle:'compact',
 				debugInfo:false
 			},
